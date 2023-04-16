@@ -436,6 +436,7 @@ module.exports = grammar({
         repeat($.decorator),
         alias($.string, $.property_identifier),
         ':',
+        repeat($.decorator),
         $._type,
       ),
 
@@ -601,6 +602,7 @@ module.exports = grammar({
     record_field: $ => seq(
       $._record_field_name,
       ':',
+      repeat($.decorator),
       optional('?'),
       $.expression,
     ),
@@ -641,6 +643,7 @@ module.exports = grammar({
     object_field: $ => seq(
       alias($.string, $.property_identifier),
       ':',
+      repeat($.decorator),
       $.expression,
     ),
 

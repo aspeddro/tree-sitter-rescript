@@ -10,11 +10,13 @@ module.exports = grammar({
     $._template_chars,
     $._lparen,
     $._rparen,
-    $._list_constructor
+    $._list_constructor,
+    $._decorator_inline
   ],
 
   extras: $ => [
     $.comment,
+    $.decorator,
     /[\s\uFEFF\u2060\u200B\u00A0]/
   ],
 
@@ -77,41 +79,28 @@ module.exports = grammar({
     [$.primary_expression, $._literal_pattern],
     [$.primary_expression, $.lazy_pattern],
     [$.primary_expression, $._jsx_child],
-    [$.tuple_pattern, $.parameter],
-    [$.primary_expression, $.parameter],
-    [$.primary_expression, $.record_field],
     [$.tuple_type, $.function_type_parameter],
     [$.list, $.list_pattern],
     [$.array, $.array_pattern],
-    [$.record_field, $.record_pattern],
-    [$.expression_statement, $.ternary_expression],
     [$.type_declaration],
-    [$.type_binding],
     [$.let_declaration],
-    [$.let_declaration, $.ternary_expression],
     [$.variant_identifier, $.module_identifier],
     [$.variant, $.variant_pattern],
-    [$.variant_declaration, $.function_type_parameter],
     [$.variant_arguments, $._variant_pattern_parameters],
     [$.polyvar, $.polyvar_pattern],
     [$._pattern],
-    [$._record_element, $.jsx_expression],
     [$._record_element, $._record_single_field],
     [$._record_pun_field, $._record_single_pun_field],
     [$._record_field_name, $.record_pattern],
-    [$.decorator],
     [$._statement, $._one_or_more_statements],
     [$._inline_type, $.function_type_parameters],
     [$.primary_expression, $.parameter, $._pattern],
     [$.parameter, $._pattern],
     [$.parameter, $.parenthesized_pattern],
     [$.parameter, $.tuple_item_pattern],
-    [$.variant_declaration],
     [$.unit, $._function_type_parameter_list],
     [$.functor_parameter, $.module_primary_expression, $.module_identifier_path],
     [$._reserved_identifier, $.function],
-    [$.polyvar_type],
-    [$.let_binding, $.or_pattern],
     [$.exception_pattern, $.or_pattern],
     [$.type_binding, $._inline_type],
     [$._module_structure, $.parenthesized_module_expression]
@@ -140,27 +129,12 @@ module.exports = grammar({
       optional($._statement_delimeter),
     ),
 
+
     statement: $ => choice(
-      alias($._decorated_statement, $.decorated),
-      $.decorator_statement,
       $.expression_statement,
       $.declaration,
       $.open_statement,
       $.include_statement,
-    ),
-
-    _decorated_statement: $ => seq(
-      repeat1($.decorator),
-      choice(
-        $.declaration,
-        $.expression_statement
-      )
-    ),
-
-    decorator_statement: $ => seq(
-      '@@',
-      $.decorator_identifier,
-      optional($.decorator_arguments)
     ),
 
     block: $ => prec.right(seq(
@@ -282,7 +256,7 @@ module.exports = grammar({
       'type',
       optional('rec'),
       sep1(
-        seq(repeat($._newline), repeat($.decorator), 'and'),
+        seq(repeat($._newline), 'and'),
         $.type_binding
       )
     ),
@@ -314,7 +288,6 @@ module.exports = grammar({
 
     type_annotation: $ => seq(
       ':',
-      repeat($.decorator),
       $._inline_type,
     ),
 
@@ -367,7 +340,6 @@ module.exports = grammar({
     )),
 
     variant_declaration: $ => prec.right(seq(
-      repeat($.decorator),
       $.variant_identifier,
       optional($.variant_parameters),
       optional($.type_annotation),
@@ -380,7 +352,6 @@ module.exports = grammar({
     ),
 
     polyvar_type: $ => prec.left(seq(
-      repeat($.decorator),
       choice('[', '[>', '[<',),
       optional('|'),
       barSep1($.polyvar_declaration),
@@ -390,7 +361,6 @@ module.exports = grammar({
     polyvar_declaration: $ => prec.right(
       choice(
         seq(
-          repeat($.decorator),
           $.polyvar_identifier,
           optional($.polyvar_parameters),
         ),
@@ -411,7 +381,6 @@ module.exports = grammar({
     ),
 
     record_type_field: $ => seq(
-      repeat($.decorator),
       optional('mutable'),
       alias($.value_identifier, $.property_identifier),
       optional('?'),
@@ -433,7 +402,6 @@ module.exports = grammar({
     object_type_field: $ => choice(
       seq('...', choice($.type_identifier, $.type_identifier_path)),
       seq(
-        repeat($.decorator),
         alias($.string, $.property_identifier),
         ':',
         repeat($.decorator),
@@ -472,7 +440,6 @@ module.exports = grammar({
 
     function_type_parameter: $ => seq(
       optional($.uncurry),
-      repeat($.decorator),
       choice(
         $._type,
         seq($.uncurry, $._type),
@@ -484,7 +451,7 @@ module.exports = grammar({
       choice('export', 'let'),
       optional('rec'),
       sep1(
-        seq(repeat($._newline), repeat($.decorator), 'and'),
+        seq(repeat($._newline), 'and'),
         $.let_binding
       )
     ),
@@ -496,14 +463,12 @@ module.exports = grammar({
           $.type_annotation,
           optional(
             seq('=',
-              repeat($.decorator),
               field('body', $.expression)
             )
           )
         ),
         seq(
           '=',
-          repeat($.decorator),
           field('body', $.expression),
         )
       )
@@ -560,7 +525,6 @@ module.exports = grammar({
 
     parenthesized_expression: $ => seq(
       '(',
-      repeat($.decorator),
       $.expression,
       optional($.type_annotation),
       ')'
@@ -579,7 +543,6 @@ module.exports = grammar({
         $._definition_signature
       ),
       '=>',
-      repeat($.decorator),
       field('body', $.expression),
     )),
 
@@ -650,7 +613,7 @@ module.exports = grammar({
     tuple: $ => seq(
       '(',
       commaSep2t(
-        seq(repeat($.decorator), $.expression)
+        $.expression
       ),
       ')',
     ),
@@ -658,7 +621,7 @@ module.exports = grammar({
     array: $ => seq(
       '[',
       commaSept(
-        seq(repeat($.decorator), $.expression)
+        $.expression
       ),
       ']'
     ),
@@ -668,7 +631,7 @@ module.exports = grammar({
       '{',
       optional(
         commaSep1t(
-          seq(repeat($.decorator), $._list_element)
+          $._list_element
         )
       ),
       '}'
@@ -776,7 +739,6 @@ module.exports = grammar({
 
     _call_argument: $ => choice(
       seq(
-        repeat($.decorator),
         $.expression,
         optional($.type_annotation),
       ),
@@ -791,7 +753,6 @@ module.exports = grammar({
         seq(
           '=',
           optional('?'),
-          repeat($.decorator),
           field('value', $.expression),
           optional(field('type', $.type_annotation)),
         ),
@@ -936,7 +897,6 @@ module.exports = grammar({
     ),
 
     tuple_item_pattern: $ => seq(
-      repeat($.decorator),
       $._pattern,
       optional($.type_annotation),
     ),
@@ -950,7 +910,7 @@ module.exports = grammar({
     array_pattern: $ => seq(
       '[',
       optional(commaSep1t(
-        seq(repeat($.decorator), $._collection_element_pattern)
+        $._collection_element_pattern
       )),
       ']',
     ),
@@ -959,7 +919,7 @@ module.exports = grammar({
       $._list_constructor,
       '{',
       optional(commaSep1t(
-        seq(repeat($.decorator), $._collection_element_pattern)
+        $._collection_element_pattern,
       )),
       '}',
     ),
@@ -1094,9 +1054,11 @@ module.exports = grammar({
 
     decorator: $ => seq(
       '@',
-      $.decorator_identifier,
-      optional($.decorator_arguments)
-    ),
+      optional('@'),
+      choice(
+        seq($.decorator_identifier, $.decorator_arguments),
+        alias($._decorator_inline, $.decorator_identifier),
+      )),
 
     decorator_arguments: $ => seq(
       '(',

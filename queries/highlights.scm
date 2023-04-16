@@ -82,7 +82,6 @@
 
 [
  "@"
- "@@"
  (decorator_identifier)
 ] @annotation
 

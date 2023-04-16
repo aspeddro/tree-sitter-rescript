@@ -11,7 +11,8 @@ enum TokenType {
   TEMPLATE_CHARS,
   L_PAREN,
   R_PAREN,
-  LIST_CONSTRUCTOR
+  LIST_CONSTRUCTOR,
+  DECORATOR_INLINE,
 };
 
 typedef struct ScannerState {
@@ -129,6 +130,10 @@ static bool scan_whitespace_and_comments(TSLexer *lexer) {
 
 static bool is_identifier_start(char c) {
   return c == '_' || (c >= 'a' && c <= 'z');
+}
+
+static bool is_valid_decorator_identifier(char c) {
+  return c == '_' || c == '.' || c == '\'' || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
 }
 
 bool tree_sitter_rescript_external_scanner_scan(
@@ -305,6 +310,24 @@ bool tree_sitter_rescript_external_scanner_scan(
         }
       }
     }
+  }
+
+  if (valid_symbols[DECORATOR_INLINE] && lexer->lookahead == '@') {
+    lexer->result_symbol = DECORATOR_INLINE;
+
+    advance(lexer);
+
+    if (is_identifier_start(lexer->lookahead)) {
+      while (is_valid_decorator_identifier(lexer->lookahead)) {
+        advance(lexer);
+      }
+    }
+
+    if (lexer->lookahead == ' ' || lexer->lookahead == '\n') {
+      lexer->mark_end(lexer);
+      return true;
+    }
+    return false;
   }
 
   lexer->advance(lexer, iswspace(lexer->lookahead));

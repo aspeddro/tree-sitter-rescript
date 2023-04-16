@@ -12,7 +12,7 @@ foo(bar, @this (me, amount) => set(me, amount))
       (value_identifier)
       (arguments
         (value_identifier)
-        (decorator (decorator_identifier))
+        (decorator)
         (function
           (formal_parameters
             (parameter (value_identifier))
@@ -44,7 +44,7 @@ call()
       (value_identifier)
       (call_expression
         (parenthesized_expression
-          (decorator (decorator_identifier))
+          (decorator)
           (value_identifier_path
             (module_identifier)
             (value_identifier)))
@@ -55,7 +55,7 @@ call()
   (let_declaration
     (let_binding
       (value_identifier)
-      (decorator (decorator_identifier))
+      (decorator)
       (call_expression
         (value_identifier_path
           (module_identifier)
@@ -69,7 +69,7 @@ call()
       (value_identifier)
       (function
         (formal_parameters)
-        (decorator (decorator_identifier))
+        (decorator)
         (call_expression
           (value_identifier_path
             (module_identifier_path
@@ -80,11 +80,10 @@ call()
             (array)
             (number))))))
 
-  (decorated
-    (decorator (decorator_identifier))
+    (decorator)
     (expression_statement
       (call_expression
-        (value_identifier) (arguments)))))
+        (value_identifier) (arguments))))
 
 ============================================
 Decorator before type `and`
@@ -103,21 +102,20 @@ and bar = {bar: int}
 ---
 
 (source_file
-  (decorated
-    (decorator (decorator_identifier))
-    (type_declaration
+  (decorator)
+  (type_declaration
+    (type_binding
+      (type_identifier)
+      (record_type (record_type_field (property_identifier) (type_annotation (type_identifier)))))
+    (decorator)
+    (type_binding
+      (type_identifier)
+      (record_type (record_type_field (property_identifier) (type_annotation (type_identifier)))))
+      (decorator)
+      (decorator)
       (type_binding
         (type_identifier)
-        (record_type (record_type_field (property_identifier) (type_annotation (type_identifier)))))
-      (decorator (decorator_identifier))
-      (type_binding
-        (type_identifier)
-        (record_type (record_type_field (property_identifier) (type_annotation (type_identifier)))))
-        (decorator (decorator_identifier))
-        (decorator (decorator_identifier))
-        (type_binding
-          (type_identifier)
-          (record_type (record_type_field (property_identifier) (type_annotation (type_identifier))))))))
+        (record_type (record_type_field (property_identifier) (type_annotation (type_identifier)))))))
 
 ============================================
 Decorator with type
@@ -129,21 +127,17 @@ let make = (~x, ~y) => React.string(x ++ y)
 ---
 
 (source_file
-  (decorated
-    (decorator
-      (decorator_identifier)
-      (decorator_arguments
-        (type_annotation (type_identifier))))
-    (let_declaration
-      (let_binding
-        (value_identifier)
-        (function
-          (formal_parameters
-            (parameter (labeled_parameter (value_identifier)))
-            (parameter (labeled_parameter (value_identifier))))
-          (call_expression
-            (value_identifier_path
-              (module_identifier) (value_identifier))
-            (arguments
-              (binary_expression
-                (value_identifier) (value_identifier)))))))))
+  (decorator (decorator_identifier) (decorator_arguments (type_annotation (type_identifier))))
+  (let_declaration
+    (let_binding
+      (value_identifier)
+      (function
+        (formal_parameters
+          (parameter (labeled_parameter (value_identifier)))
+          (parameter (labeled_parameter (value_identifier))))
+        (call_expression
+          (value_identifier_path
+            (module_identifier) (value_identifier))
+          (arguments
+            (binary_expression
+              (value_identifier) (value_identifier))))))))

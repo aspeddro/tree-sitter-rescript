@@ -81,9 +81,9 @@
 ;-----
 
 [
- "@"
  "@@"
  (decorator_identifier)
+ (decorator)
 ] @annotation
 
 (extension_identifier) @keyword

@@ -181,7 +181,7 @@ call(~a=@decorator 1)
       arguments: (arguments
         (labeled_argument
           label: (value_identifier)
-          (decorator)
+          (decorator (decorator_identifier))
           value: (number))))))
 
 ===========================================

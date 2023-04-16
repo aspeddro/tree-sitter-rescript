@@ -265,7 +265,7 @@ type t<'w> = [M.t<'w>]
     (type_binding
       (type_identifier)
       (type_parameters (type_identifier))
-      (decorator)
+      (decorator (decorator_identifier))
       (polyvar_type
         (polyvar_declaration (polyvar_identifier))
         (polyvar_declaration (polyvar_identifier))
@@ -447,7 +447,7 @@ type person = {@meth "say": (string, string) => unit}
     (type_binding
       (type_identifier)
       (object_type
-        (decorator)
+        (decorator (decorator_identifier))
         (field
           (property_identifier (string_fragment))
           (function_type

@@ -130,17 +130,10 @@ module.exports = grammar({
 
 
     statement: $ => choice(
-      $.decorator_statement,
       $.expression_statement,
       $.declaration,
       $.open_statement,
       $.include_statement,
-    ),
-
-    decorator_statement: $ => seq(
-      '@@',
-      $.decorator_identifier,
-      optional($.decorator_arguments)
     ),
 
     block: $ => prec.right(seq(
@@ -1057,14 +1050,13 @@ module.exports = grammar({
       $.expression,
     ),
 
-    decorator: $ => choice(
-      seq(
-        '@',
-        $.decorator_identifier,
-        $.decorator_arguments
-      ),
-      $._decorator_inline,
-    ),
+    decorator: $ => seq(
+      '@',
+      optional('@'),
+      choice(
+        seq($.decorator_identifier, $.decorator_arguments),
+        alias($._decorator_inline, $.decorator_identifier),
+      )),
 
     decorator_arguments: $ => seq(
       '(',

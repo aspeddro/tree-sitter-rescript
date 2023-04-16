@@ -449,20 +449,20 @@ external add: (
         (type_identifier)))
     (string (string_fragment)))
 
-  (decorator)
+  (decorator (decorator_identifier))
   (external_declaration
     (value_identifier)
     (type_annotation (type_identifier))
     (string (string_fragment)))
 
-  (decorator)
+  (decorator (decorator_identifier))
   (external_declaration
     (value_identifier)
     (type_annotation (type_identifier))
     (string (string_fragment)))
 
   (decorator (decorator_identifier) (decorator_arguments (string (string_fragment))))
-  (decorator)
+  (decorator (decorator_identifier))
   (external_declaration
     (value_identifier)
     (type_annotation (type_identifier))
@@ -479,7 +479,7 @@ external add: (
     (string (string_fragment)))
 
 
-  (decorator)
+  (decorator (decorator_identifier))
   (external_declaration
     (value_identifier)
     (type_annotation
@@ -499,7 +499,7 @@ external add: (
         (unit_type)))
       (string (string_fragment)))
 
-  (decorator)
+  (decorator (decorator_identifier))
   (external_declaration
     (value_identifier)
     (type_annotation
@@ -510,7 +510,7 @@ external add: (
             (labeled_parameter
               (value_identifier)
               (type_annotation
-                (decorator)
+                (decorator (decorator_identifier))
                 (polyvar_type
                   (polyvar_declaration
                     (polyvar_identifier)
@@ -532,9 +532,7 @@ Decorators
 ---
 
 (source_file
-  (decorator_statement
-    (decorator_identifier)
-    (decorator_arguments (string (string_fragment)))))
+  (decorator (decorator_identifier) (decorator_arguments (string (string_fragment)))))
 
 ===========================================
 Exception declaration

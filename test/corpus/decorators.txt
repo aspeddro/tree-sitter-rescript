@@ -12,7 +12,7 @@ foo(bar, @this (me, amount) => set(me, amount))
       (value_identifier)
       (arguments
         (value_identifier)
-        (decorator)
+        (decorator (decorator_identifier))
         (function
           (formal_parameters
             (parameter (value_identifier))
@@ -44,7 +44,7 @@ call()
       (value_identifier)
       (call_expression
         (parenthesized_expression
-          (decorator)
+          (decorator (decorator_identifier))
           (value_identifier_path
             (module_identifier)
             (value_identifier)))
@@ -55,7 +55,7 @@ call()
   (let_declaration
     (let_binding
       (value_identifier)
-      (decorator)
+      (decorator (decorator_identifier))
       (call_expression
         (value_identifier_path
           (module_identifier)
@@ -69,7 +69,7 @@ call()
       (value_identifier)
       (function
         (formal_parameters)
-        (decorator)
+        (decorator (decorator_identifier))
         (call_expression
           (value_identifier_path
             (module_identifier_path
@@ -80,7 +80,7 @@ call()
             (array)
             (number))))))
 
-    (decorator)
+    (decorator (decorator_identifier))
     (expression_statement
       (call_expression
         (value_identifier) (arguments))))
@@ -102,17 +102,17 @@ and bar = {bar: int}
 ---
 
 (source_file
-  (decorator)
+  (decorator (decorator_identifier))
   (type_declaration
     (type_binding
       (type_identifier)
       (record_type (record_type_field (property_identifier) (type_annotation (type_identifier)))))
-    (decorator)
+    (decorator (decorator_identifier))
     (type_binding
       (type_identifier)
       (record_type (record_type_field (property_identifier) (type_annotation (type_identifier)))))
-      (decorator)
-      (decorator)
+      (decorator (decorator_identifier))
+      (decorator (decorator_identifier))
       (type_binding
         (type_identifier)
         (record_type (record_type_field (property_identifier) (type_annotation (type_identifier)))))))

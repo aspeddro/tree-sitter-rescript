@@ -129,7 +129,7 @@ let [@decorator bar, _] = foo
   (let_declaration
     (let_binding
       (array_pattern
-        (decorator)
+        (decorator (decorator_identifier))
         (value_identifier)
         (value_identifier))
       (value_identifier))))
@@ -154,7 +154,7 @@ let list{@decorator head, ..._} = foo
   (let_declaration
     (let_binding
       (list_pattern
-        (decorator)
+        (decorator (decorator_identifier))
         (value_identifier)
         (spread_pattern (value_identifier)))
       (value_identifier))))
@@ -295,17 +295,17 @@ and b = c
 ---
 
 (source_file
-  (decorator)
+  (decorator (decorator_identifier))
   (let_declaration
     (let_binding
       (value_identifier)
       (value_identifier))
-    (decorator)
-    (decorator)
+    (decorator (decorator_identifier))
+    (decorator (decorator_identifier))
     (let_binding
       (value_identifier)
       (value_identifier))
-    (decorator)
+    (decorator (decorator_identifier))
     (let_binding
       (value_identifier)
       (number))))

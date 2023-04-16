@@ -312,10 +312,8 @@ bool tree_sitter_rescript_external_scanner_scan(
     }
   }
 
-  if (valid_symbols[DECORATOR_INLINE] && lexer->lookahead == '@') {
+  if (valid_symbols[DECORATOR_INLINE]) {
     lexer->result_symbol = DECORATOR_INLINE;
-
-    advance(lexer);
 
     if (is_identifier_start(lexer->lookahead)) {
       while (is_valid_decorator_identifier(lexer->lookahead)) {

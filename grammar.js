@@ -3,6 +3,7 @@ module.exports = grammar({
 
   externals: $ => [
     $._newline,
+    $._automatic_semicolon,
     $.comment,
     $._newline_and_comment,
     '"',
@@ -15,6 +16,8 @@ module.exports = grammar({
 
   extras: $ => [
     $.comment,
+    // $._newline,
+    // $._newline_and_comment,
     /[\s\uFEFF\u2060\u200B\u00A0]/
   ],
 
@@ -100,7 +103,7 @@ module.exports = grammar({
     [$._record_pun_field, $._record_single_pun_field],
     [$._record_field_name, $.record_pattern],
     [$.decorator],
-    [$._statement, $._one_or_more_statements],
+    [$.statement, $._one_or_more_statements],
     [$._inline_type, $.function_type_parameters],
     [$.primary_expression, $.parameter, $._pattern],
     [$.parameter, $._pattern],
@@ -119,30 +122,26 @@ module.exports = grammar({
 
   rules: {
     source_file: $ => seq(
-      repeat($._statement_delimeter),
-      repeat($._statement)
+      // repeat($._statement_delimeter),
+      repeat($.statement),
     ),
 
-    _statement: $ => seq(
-      $.statement,
-      repeat1($._statement_delimeter)
-    ),
+    // _statement: $ => seq(
+    //   $.statement,
+    //   repeat1($._statement_delimeter)
+    // ),
 
-    _statement_delimeter: $ => choice(
-      ';',
-      $._newline,
-      alias($._newline_and_comment, $.comment),
-    ),
+    // _statement_delimeter: $ => choice(
+    //   ';',
+    //   $._newline,
+    //   alias($._newline_and_comment, $.comment),
+    // ),
 
-    _one_or_more_statements: $ => seq(
-      repeat($._statement),
-      $.statement,
-      optional($._statement_delimeter),
-    ),
+    _one_or_more_statements: $ => $.statement,
 
     statement: $ => choice(
-      alias($._decorated_statement, $.decorated),
-      $.decorator_statement,
+      // alias($._decorated_statement, $.decorated),
+      // $.decorator_statement,
       $.expression_statement,
       $.declaration,
       $.open_statement,
@@ -165,14 +164,16 @@ module.exports = grammar({
 
     block: $ => prec.right(seq(
       '{',
-      optional($._one_or_more_statements),
+      repeat($.statement),
       '}',
+      optional($._semicolon)
     )),
 
     open_statement: $ => seq(
       'open',
       optional('!'),
       $.module_expression,
+      $._semicolon
     ),
 
     include_statement: $ => seq(
@@ -180,7 +181,8 @@ module.exports = grammar({
       choice(
         $._module_definition,
         parenthesize($._module_structure)
-      )
+      ),
+      $._semicolon
     ),
 
     declaration: $ => choice(
@@ -207,7 +209,8 @@ module.exports = grammar({
       'module',
       optional('rec'),
       optional('type'),
-      sep1('and', $.module_binding)
+      sep1('and', $.module_binding),
+      $._semicolon
     ),
 
     _module_structure: $ => seq(
@@ -268,13 +271,15 @@ module.exports = grammar({
       $.type_annotation,
       '=',
       $.string,
+      $._semicolon
     ),
 
     exception_declaration: $ => seq(
       'exception',
       $.variant_identifier,
       optional($.variant_parameters),
-      optional(seq('=', choice($.variant_identifier, $.nested_variant_identifier)))
+      optional(seq('=', choice($.variant_identifier, $.nested_variant_identifier))),
+      $._semicolon
     ),
 
     type_declaration: $ => seq(
@@ -282,9 +287,10 @@ module.exports = grammar({
       'type',
       optional('rec'),
       sep1(
-        seq(repeat($._newline), repeat($.decorator), 'and'),
+        seq(/* repeat($._newline),  */repeat($.decorator), 'and'),
         $.type_binding
-      )
+      ),
+      $._semicolon
     ),
 
     type_binding: $ => seq(
@@ -483,9 +489,10 @@ module.exports = grammar({
       choice('export', 'let'),
       optional('rec'),
       sep1(
-        seq(repeat($._newline), repeat($.decorator), 'and'),
+        seq(repeat($.decorator), 'and'),
         $.let_binding
-      )
+      ),
+      $._semicolon
     ),
 
     let_binding: $ => seq(
@@ -508,7 +515,7 @@ module.exports = grammar({
       )
     ),
 
-    expression_statement: $ => $.expression,
+    expression_statement: $ => seq($.expression, $._semicolon),
 
     expression: $ => choice(
       $.primary_expression,
@@ -702,6 +709,7 @@ module.exports = grammar({
       '{',
       repeat($.switch_match),
       '}',
+      // $._semicolon
     ),
 
     switch_match: $ => prec.dynamic(-1, seq(
@@ -709,7 +717,7 @@ module.exports = grammar({
       field('pattern', $._pattern),
       optional($.guard),
       '=>',
-      field('body', alias($._one_or_more_statements, $.sequence_expression)),
+      field('body', $.statement),
     )),
 
     guard: $ => seq(
@@ -995,7 +1003,8 @@ module.exports = grammar({
     jsx_expression: $ => seq(
       '{',
       optional(choice(
-        $._one_or_more_statements,
+        // $._one_or_more_statements,
+        repeat($.statement),
         $.spread_element
       )),
       '}'
@@ -1216,7 +1225,7 @@ module.exports = grammar({
       $._one_or_more_statements,
       // explicit newline here because it won’t be reported otherwise by the scanner
       // because we’re in parens
-      optional($._newline),
+      // optional($._newline),
       ')',
     ),
 
@@ -1499,7 +1508,9 @@ module.exports = grammar({
     _reserved_identifier: $ => choice(
       'async',
       'unpack'
-    )
+    ),
+
+    _semicolon: $ => choice($._automatic_semicolon, ';')
   },
 });
 

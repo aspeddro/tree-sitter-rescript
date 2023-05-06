@@ -85,7 +85,7 @@ module.exports = grammar({
     [$.type_declaration],
     [$.let_declaration],
     [$.polyvar, $.polyvar_pattern],
-    [$._pattern],
+    // [$._pattern],
     [$._record_element, $._record_single_field],
     [$._record_pun_field, $._record_single_pun_field],
     [$._record_field_name, $.record_pattern],

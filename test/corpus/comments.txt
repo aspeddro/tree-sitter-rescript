@@ -1,6 +1,6 @@
-============================================
+================================================================================
 Comments
-============================================
+================================================================================
 
 // Single line
 1
@@ -37,36 +37,47 @@ switch foo {
 // in-switch
 }
 
----
+--------------------------------------------------------------------------------
 
 (source_file
   (comment)
-  (expression_statement (number))
+  (expression_statement
+    (number))
   (comment)
-  (expression_statement (number))
+  (expression_statement
+    (number))
   (comment)
-  (expression_statement (number))
-  (expression_statement (number))
+  (expression_statement
+    (number))
+  (expression_statement
+    (number))
   (comment)
-  (expression_statement (number))
+  (expression_statement
+    (number))
   (comment)
   (comment)
-  (expression_statement (number))
+  (expression_statement
+    (number))
   (comment)
-  (expression_statement (number))
+  (expression_statement
+    (number))
   (comment)
-  (expression_statement (number))
+  (expression_statement
+    (number))
   (comment)
-  (expression_statement (number))
+  (expression_statement
+    (number))
   (expression_statement
     (pipe_expression
-      (value_identifier)
+      (value_name)
       (comment)
-      (value_identifier)))
+      (value_name)))
   (expression_statement
     (switch_expression
-      (value_identifier)
+      (value_name)
       (switch_match
-        (number) 
-        (sequence_expression (expression_statement (number))))
+        (number)
+        (sequence_expression
+          (expression_statement
+            (number))))
       (comment))))

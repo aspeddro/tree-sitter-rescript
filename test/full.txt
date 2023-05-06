@@ -1,0 +1,4955 @@
+yarn run v1.22.19
+$ /home/pedro/Desktop/projects/tree-sitter-rescript/node_modules/.bin/tree-sitter test
+  comments:
+    ✗ [31mComments[0m
+  expressions:
+    ✓ [32mUnit[0m
+    ✗ [31mParenthesized expressions[0m
+    ✗ [31mNested identifiers[0m
+    ✗ [31mEscape identifiers[0m
+    ✓ [32mTuple[0m
+    ✗ [31mCall expression[0m
+    ✗ [31mPipe[0m
+    ✗ [31mRecord[0m
+    ✓ [32mObject[0m
+    ✗ [31mIf/else[0m
+    ✗ [31mSwitch of literals[0m
+    ✗ [31mSwitch of variants[0m
+    ✗ [31mSwitch of polyvars[0m
+    ✗ [31mSwitch of vars[0m
+    ✗ [31mSwitch of tuples[0m
+    ✗ [31mSwitch of mixed tuples[0m
+    ✗ [31mSwitch of record patterns[0m
+    ✗ [31mSwitch of lists[0m
+    ✗ [31mSwitch of arrays[0m
+    ✗ [31mSwitch of statements[0m
+    ✗ [31mSwitch exceptions[0m
+    ✗ [31mSwitch block[0m
+    ✗ [31mSwitch parenthesized[0m
+    ✗ [31mSwitch ranges[0m
+    ✓ [32mMath operators[0m
+    ✗ [31mBoolean operators[0m
+    ✗ [31mString operators[0m
+    ✗ [31mCoercion operator[0m
+    ✗ [31mTernaries[0m
+    ✓ [32mArrays[0m
+    ✗ [31mLists[0m
+    ✗ [31mMember expressions[0m
+    ✗ [31mSubscript expressions[0m
+    ✗ [31mVariants[0m
+    ✗ [31mExtensions[0m
+    ✗ [31mRaise expression[0m
+    ✗ [31mAssert expression[0m
+    ✗ [31mTry-catch[0m
+    ✗ [31mMutation expressions[0m
+    ✗ [31mFor loop[0m
+    ✗ [31mWhile loop[0m
+    ✗ [31mAwait expression[0m
+    ✗ [31mAs aliasing[0m
+    ✗ [31mLazy Expression[0m
+  modules:
+    ✗ [31mOpen[0m
+    ✗ [31mInclude[0m
+    ✗ [31mSimple definition[0m
+    ✗ [31mSignature and definition[0m
+    ✗ [31mModule types[0m
+    ✗ [31mFirst Class module[0m
+    ✗ [31mFunctor definition[0m
+    ✗ [31mFunctor signature[0m
+    ✗ [31mFunctor use[0m
+    ✗ [31mAlias[0m
+    ✗ [31mRecursive[0m
+    ✗ [31mDefinition through extension[0m
+    ✗ [31mExternals[0m
+    ✗ [31mException declaration[0m
+    ✗ [31mModule Constraints[0m
+  literals:
+    ✓ [32mBoolean[0m
+    ✓ [32mNumbers[0m
+    ✓ [32mStrings containing comment-like content[0m
+    ✓ [32mQuote escaping[0m
+    ✗ [31mTemplate strings[0m
+    ✓ [32mTricky template strings[0m
+    ✓ [32mCharacters[0m
+    ✗ [31mPolyvars[0m
+  error_scopes:
+  jsx:
+    ✗ [31mSimple JSX elements[0m
+    ✓ [32mCustom type children[0m
+    ✗ [31mAttribute values[0m
+    ✗ [31mAnonymous JSX element[0m
+    ✗ [31mBlock children[0m
+    ✗ [31mChildren spread[0m
+    ✗ [31mAttribute Block[0m
+    ✗ [31mSpread props[0m
+  decorators:
+    ✓ [32mDecorator inline[0m
+    ✓ [32mDecorator with arguments[0m
+    ✗ [31mDecorator with type[0m
+  let_bindings:
+    ✗ [31mPlain[0m
+    ✗ [31mTuple destructuring[0m
+    ✗ [31mRecord destructuring[0m
+    ✗ [31mArray destructuring[0m
+    ✗ [31mList destructuring[0m
+    ✗ [31mBlock[0m
+    ✗ [31mAnnotated[0m
+    ✗ [31mRecursive[0m
+    ✗ [31mUnit[0m
+    ✗ [31mAnd (Primitives)[0m
+    ✗ [31mAnd (Functions)[0m
+    ✗ [31mAnd (decorated)[0m
+    ✗ [31mLabled function with uncurried[0m
+    ✗ [31mDestructuring module[0m
+    ✗ [31mPacking module[0m
+    ✗ [31mUnpacking module[0m
+    ✗ [31mLazy Values[0m
+  type_declarations:
+    ✗ [31mOpaque[0m
+    ✗ [31mExport[0m
+    ✗ [31mAlias[0m
+    ✗ [31mPrivate[0m
+    ✗ [31mTuple type[0m
+    ✗ [31mRecord type[0m
+    ✗ [31mExtensible Variant[0m
+    ✗ [31mVariant[0m
+    ✗ [31mAnnotated variant[0m
+    ✗ [31mPolyvar[0m
+    ✗ [31mFunction[0m
+    ✗ [31mObject[0m
+    ✗ [31mGeneric[0m
+    ✗ [31mRecursive[0m
+    ✗ [31mDecorated[0m
+    ✗ [31mMutually Recursive[0m
+    ✗ [31mLabled function with uncurried[0m
+    ✗ [31mPolymorphic type[0m
+    ✗ [31mVariance annotations[0m
+    ✗ [31mType constraint[0m
+  functions:
+    ✗ [31mSimple parameters[0m
+    ✗ [31mType annotations[0m
+    ✗ [31mAbstract type[0m
+    ✗ [31mParameter defaults[0m
+    ✗ [31mParameter aliasing[0m
+    ✗ [31mRecord pattern[0m
+    ✗ [31mRef assignment as body[0m
+    ✗ [31mOperator precendence[0m
+    ✗ [31mAsync[0m
+
+111 failures:
+
+[32mexpected[0m / [31mactual[0m
+
+  1. Comments:
+
+    (source_file
+      (comment)
+      (expression_statement
+        (number))
+      (comment)
+      (expression_statement
+        (number))
+      (comment)
+      (expression_statement
+        (number))
+      (expression_statement
+        (number))
+      (comment)
+      (expression_statement
+        (number))
+      (comment)
+      (comment)
+      (expression_statement
+        (number))
+      (comment)
+      (expression_statement
+        (number))
+      (comment)
+      (expression_statement
+        (number))
+      (comment)
+      (expression_statement
+        (number))
+      (expression_statement
+        (pipe_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (comment)
+[31m          (value_name)))[0m
+[32m          (value_identifier)))[0m
+      (expression_statement
+        (switch_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (switch_match
+            (number)
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (comment))))
+
+
+  2. Parenthesized expressions:
+
+    (source_file
+      (expression_statement
+        (parenthesized_expression
+          (number)))
+      (expression_statement
+        (parenthesized_expression
+          (number)
+          (type_annotation
+[31m            (type_constructor_path
+              (type_constructor)))))[0m
+[32m            (type_identifier))))[0m
+      (expression_statement
+        (parenthesized_expression
+          (unit))))
+
+
+  3. Nested identifiers:
+
+    (source_file
+      (expression_statement
+[31m        (value_path
+          (module_path
+            (module_path
+              (module_name))
+            (module_name))
+          (value_name)))[0m
+[32m        (value_identifier_path
+          (module_identifier_path
+            (module_identifier)
+            (module_identifier))
+          (value_identifier)))[0m
+      (expression_statement
+        (member_expression
+[31m          (value_path
+            (module_path
+              (module_path
+                (module_name))
+              (module_name))
+            (value_name))
+          (value_path
+            (value_name)))))[0m
+[32m          (value_identifier_path
+            (module_identifier_path
+              (module_identifier)
+              (module_identifier))
+            (value_identifier))
+          (property_identifier))))[0m
+
+
+  4. Escape identifiers:
+
+    (source_file
+      (expression_statement
+[31m        (value_name)))[0m
+[32m        (value_identifier)))[0m
+
+
+  5. Call expression:
+
+    (source_file
+      (expression_statement
+        (call_expression
+[31m          function: (value_name)[0m
+[32m          function: (value_identifier)[0m
+          arguments: (arguments
+            (number)
+            (number))))
+      (expression_statement
+        (call_expression
+[31m          function: (value_name)[0m
+[32m          function: (value_identifier)[0m
+          arguments: (arguments
+            (number)
+            (type_annotation
+[31m              (type_constructor_path
+                (type_constructor)))[0m
+[32m              (type_identifier))[0m
+            (labeled_argument
+[31m              label: (value_path
+                (value_name))[0m
+[32m              label: (value_identifier)[0m
+              value: (number)
+              type: (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor)))))))[0m
+[32m                (type_identifier))))))[0m
+      (expression_statement
+        (call_expression
+[31m          function: (value_name)[0m
+[32m          function: (value_identifier)[0m
+          arguments: (arguments
+            (number)
+            (labeled_argument
+[31m              label: (value_path
+                (value_name))[0m
+[32m              label: (value_identifier)[0m
+              value: (number))
+            (labeled_argument
+[31m              label: (value_path
+                (value_name)))[0m
+[32m              label: (value_identifier))[0m
+            (unit))))
+      (expression_statement
+        (call_expression
+[31m          function: (value_name)[0m
+[32m          function: (value_identifier)[0m
+          arguments: (arguments
+            (labeled_argument
+[31m              label: (value_path
+                (value_name)))[0m
+[32m              label: (value_identifier))[0m
+            (labeled_argument
+[31m              label: (value_path
+                (value_name))
+              value: (value_name)))))[0m
+[32m              label: (value_identifier)
+              value: (value_identifier)))))[0m
+      (expression_statement
+        (call_expression
+[31m          function: (value_name)[0m
+[32m          function: (value_identifier)[0m
+          arguments: (arguments
+            (uncurry)
+            (number))))
+      (expression_statement
+        (call_expression
+[31m          function: (value_name)[0m
+[32m          function: (value_identifier)[0m
+          arguments: (arguments
+            (function
+[31m              parameter: (value_name)[0m
+[32m              parameter: (value_identifier)[0m
+              body: (binary_expression
+                left: (pipe_expression
+[31m                  (value_name)
+                  (value_path
+                    (module_path
+                      (module_name))
+                    (value_name)))[0m
+[32m                  (value_identifier)
+                  (value_identifier_path
+                    (module_identifier)
+                    (value_identifier)))[0m
+                right: (number))))))
+      (expression_statement
+        (call_expression
+[31m          function: (value_name)[0m
+[32m          function: (value_identifier)[0m
+          arguments: (arguments
+            (number)
+            (block
+              (open_statement
+[31m                (module_path
+                  (module_name)))[0m
+[32m                (module_identifier))[0m
+              (expression_statement
+[31m                (value_name)))[0m
+[32m                (value_identifier)))[0m
+            (labeled_argument
+[31m              label: (value_path
+                (value_name))[0m
+[32m              label: (value_identifier)[0m
+              value: (block
+                (expression_statement
+                  (number)))))))
+      (expression_statement
+        (call_expression
+[31m          function: (value_name)[0m
+[32m          function: (value_identifier)[0m
+          arguments: (arguments
+[31m            (value_name))))[0m
+[32m            (value_identifier))))[0m
+      (expression_statement
+        (call_expression
+[31m          function: (value_name)[0m
+[32m          function: (value_identifier)[0m
+          arguments: (arguments
+            (labeled_argument
+[31m              label: (value_path
+                (value_name))[0m
+[32m              label: (value_identifier)[0m
+              (decorator
+                (decorator_identifier))
+              value: (number))))))
+
+
+  6. Pipe:
+
+    (source_file
+      (expression_statement
+        (pipe_expression
+          (pipe_expression
+[31m            (value_name)
+            (value_name))
+          (value_name)))[0m
+[32m            (value_identifier)
+            (value_identifier))
+          (value_identifier)))[0m
+      (expression_statement
+        (pipe_expression
+          (pipe_expression
+[31m            (value_name)
+            (value_name))
+          (value_name)))[0m
+[32m            (value_identifier)
+            (value_identifier))
+          (value_identifier)))[0m
+      (expression_statement
+        (pipe_expression
+          (pipe_expression
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (call_expression
+[31m              (value_path
+                (module_path
+                  (module_name))
+                (value_name))[0m
+[32m              (value_identifier_path
+                (module_identifier)
+                (value_identifier))[0m
+              (arguments
+[31m                (value_name))))
+          (value_path
+            (module_path
+              (module_name))
+            (value_name))))[0m
+[32m                (value_identifier))))
+          (value_identifier_path
+            (module_identifier)
+            (value_identifier))))[0m
+      (expression_statement
+        (pipe_expression
+          (number)
+[31m          (constructor_path
+            (constructor_name))))[0m
+[32m          (variant
+            (variant_identifier))))[0m
+      (expression_statement
+        (pipe_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (polyvar
+            (polyvar_identifier))))
+      (expression_statement
+        (pipe_expression
+[31m          (value_name)
+          (value_name)))[0m
+[32m          (value_identifier)
+          (value_identifier)))[0m
+      (expression_statement
+        (pipe_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (parenthesized_expression
+            (function
+[31m              (value_name)[0m
+[32m              (value_identifier)[0m
+              (binary_expression
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (number))))))
+      (expression_statement
+        (pipe_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (block
+            (open_statement
+[31m              (module_path
+                (module_name)))[0m
+[32m              (module_identifier))[0m
+            (expression_statement
+[31m              (value_name)))))[0m
+[32m              (value_identifier)))))[0m
+      (expression_statement
+        (pipe_expression
+          (block
+            (expression_statement
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (call_expression
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (arguments)))))
+
+
+  7. Record:
+
+    (source_file
+      (expression_statement
+        (record
+          (spread_element
+[31m            (value_name))[0m
+[32m            (value_identifier))[0m
+          (record_field
+[31m            (property_identifier
+              (value_name))[0m
+[32m            (property_identifier)[0m
+            (number))
+          (record_field
+[31m            (property_identifier
+              (value_name))[0m
+[32m            (property_identifier)[0m
+            (string
+              (string_fragment)))
+          (record_field
+[31m            (property_identifier
+              (value_name)))))[0m
+[32m            (property_identifier))))[0m
+      (expression_statement
+        (record
+          (record_field
+[31m            (property_identifier
+              (value_name)))[0m
+[32m            (property_identifier))[0m
+          (record_field
+[31m            (property_identifier
+              (value_name)))[0m
+[32m            (property_identifier))[0m
+          (record_field
+[31m            (property_identifier
+              (value_name)))))[0m
+[32m            (property_identifier))))[0m
+      (expression_statement
+        (record
+          (record_field
+            (property_identifier
+[31m              (module_path
+                (module_name))
+              (value_name))[0m
+[32m              (module_identifier)
+              (value_identifier))[0m
+            (number))))
+      (expression_statement
+        (record
+          (record_field
+            (property_identifier
+[31m              (module_path
+                (module_name))
+              (value_name))[0m
+[32m              (module_identifier)
+              (value_identifier))[0m
+            (number))
+          (record_field
+[31m            (property_identifier
+              (value_name))[0m
+[32m            (property_identifier)[0m
+            (string
+              (string_fragment)))))
+      (expression_statement
+        (record
+          (record_field
+[31m            (property_identifier
+              (value_name))
+            (constructor_path
+              (constructor_name)))[0m
+[32m            (property_identifier)
+            (variant
+              (variant_identifier)))[0m
+          (record_field
+[31m            (property_identifier
+              (value_name)))[0m
+[32m            (property_identifier))[0m
+          (record_field
+[31m            (property_identifier
+              (value_name))[0m
+[32m            (property_identifier)[0m
+            (parenthesized_expression
+[31m              (constructor_path
+                (constructor_name))[0m
+[32m              (variant
+                (variant_identifier))[0m
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor)))))))[0m
+[32m                (type_identifier))))))[0m
+      (expression_statement
+        (record
+[31m          (property_identifier
+            (value_name)))))[0m
+[32m          (property_identifier))))[0m
+
+
+  8. If/else:
+
+    (source_file
+      (expression_statement
+        (if_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (block
+            (expression_statement
+[31m              (value_name)))))[0m
+[32m              (value_identifier)))))[0m
+      (expression_statement
+        (if_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (block
+            (expression_statement
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (else_clause
+            (block
+              (expression_statement
+[31m                (value_name))))))[0m
+[32m                (value_identifier))))))[0m
+      (expression_statement
+        (if_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (block
+            (expression_statement
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (else_if_clause
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (block
+              (expression_statement
+[31m                (value_name))))[0m
+[32m                (value_identifier))))[0m
+          (else_if_clause
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (block
+              (expression_statement
+[31m                (value_name))))[0m
+[32m                (value_identifier))))[0m
+          (else_clause
+            (block
+              (expression_statement
+[31m                (value_name)))))))[0m
+[32m                (value_identifier)))))))[0m
+
+
+  9. Switch of literals:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (switch_match
+            (or_pattern
+              (number)
+              (number))
+            (sequence_expression
+              (expression_statement
+                (string
+                  (string_fragment)))))
+          (switch_match
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (sequence_expression
+              (let_declaration
+                (let_binding
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (string
+                    (string_fragment))))
+              (expression_statement
+                (binary_expression
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (string
+                    (string_fragment)))))))))
+
+
+  10. Switch of variants:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (constructor_name))
+              (tuple_pattern
+                (tuple_item_pattern
+                  (alias_pattern
+                    (value_name)
+                    (value_name))
+                  (type_annotation
+                    (type_constructor_path
+                      (type_constructor))))
+                (tuple_item_pattern
+                  (record_pattern
+                    (value_path
+                      (value_name))
+                    (value_path
+                      (value_name))))))[0m
+[32m            (variant_pattern
+              (variant_identifier)
+              (formal_parameters
+                (value_identifier)
+                (as_aliasing
+                  (value_identifier))
+                (type_annotation
+                  (type_identifier))
+                (record_pattern
+                  (value_identifier)
+                  (value_identifier))))[0m
+            (sequence_expression
+              (expression_statement
+[31m                (value_name))))[0m
+[32m                (value_identifier))))[0m
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (module_path
+                  (module_name))
+                (constructor_name)))[0m
+[32m            (variant_pattern
+              (nested_variant_identifier
+                (module_identifier)
+                (variant_identifier)))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (constructor_name))
+              (unit))[0m
+[32m            (variant_pattern
+              (variant_identifier)
+              (formal_parameters))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (constructor_name))
+              (parenthesized_pattern
+                (value_name)))[0m
+[32m            (variant_pattern
+              (variant_identifier)
+              (formal_parameters
+                (value_identifier)))[0m
+            (sequence_expression
+              (expression_statement
+                (number)))))))
+
+
+  11. Switch of polyvars:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (switch_match
+            (polyvar_pattern
+              (polyvar_identifier))
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+            (polyvar_pattern
+              (polyvar_identifier)
+[31m              (alias_pattern
+                (tuple_pattern
+                  (tuple_item_pattern
+                    (alias_pattern
+                      (value_name)
+                      (value_name))
+                    (type_annotation
+                      (type_constructor_path
+                        (type_constructor))))
+                  (tuple_item_pattern
+                    (number)))
+                (value_name)))[0m
+[32m              (formal_parameters
+                (value_identifier)
+                (as_aliasing
+                  (value_identifier))
+                (type_annotation
+                  (type_identifier))
+                (number)))
+            (as_aliasing
+              (value_identifier))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+[31m            (alias_pattern
+              (polyvar_type_pattern
+                (type_constructor_path
+                  (module_path
+                    (module_name))
+                  (type_constructor)))
+              (value_name))[0m
+[32m            (polyvar_type_pattern
+              (type_identifier_path
+                (module_identifier)
+                (type_identifier)))
+            (as_aliasing
+              (value_identifier))[0m
+            (sequence_expression
+              (expression_statement
+                (number)))))))
+
+
+  12. Switch of vars:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (switch_match
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (guard
+              (binary_expression
+                (binary_expression
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (number))
+                (binary_expression
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (number))))
+            (sequence_expression
+              (expression_statement
+[31m                (value_name))))[0m
+[32m                (value_identifier))))[0m
+          (switch_match
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (guard
+              (binary_expression
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (number)))
+            (sequence_expression
+              (expression_statement
+[31m                (value_name))))[0m
+[32m                (value_identifier))))[0m
+          (switch_match
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (sequence_expression
+              (expression_statement
+                (number)))))))
+
+
+  13. Switch of tuples:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+          (tuple
+[31m            (value_name)
+            (value_name))[0m
+[32m            (value_identifier)
+            (value_identifier))[0m
+          (switch_match
+            (tuple_pattern
+              (tuple_item_pattern
+                (number))
+              (tuple_item_pattern
+[31m                (alias_pattern
+                  (number)
+                  (value_name))))[0m
+[32m                (number)
+                (as_aliasing
+                  (value_identifier))))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+            (tuple_pattern
+              (tuple_item_pattern
+[31m                (constructor_pattern
+                  (constructor_path
+                    (constructor_name))))[0m
+[32m                (variant_pattern
+                  (variant_identifier)))[0m
+              (tuple_item_pattern
+                (polyvar_type_pattern
+[31m                  (type_constructor_path
+                    (type_constructor)))))[0m
+[32m                  (type_identifier))))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+            (tuple_pattern
+              (tuple_item_pattern
+[31m                (value_name))[0m
+[32m                (value_identifier))[0m
+              (tuple_item_pattern
+[31m                (value_name)))[0m
+[32m                (value_identifier)))[0m
+            (sequence_expression
+              (expression_statement
+                (number)))))))
+
+
+  14. Switch of mixed tuples:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (switch_match
+            (tuple_pattern
+              (tuple_item_pattern
+                (or_pattern
+[31m                  (constructor_pattern
+                    (constructor_path
+                      (constructor_name)))
+                  (constructor_pattern
+                    (constructor_path
+                      (constructor_name)))))[0m
+[32m                  (variant_pattern
+                    (variant_identifier))
+                  (variant_pattern
+                    (variant_identifier))))[0m
+              (tuple_item_pattern
+                (number)))
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (sequence_expression
+              (expression_statement
+                (number)))))))
+
+
+  15. Switch of record patterns:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (constructor_name))
+              (parenthesized_pattern[0m
+[32m            (variant_pattern
+              (variant_identifier)
+              (formal_parameters[0m
+                (record_pattern
+[31m                  (value_path
+                    (value_name))[0m
+[32m                  (value_identifier)[0m
+                  (or_pattern
+                    (string
+                      (string_fragment))
+                    (string
+                      (string_fragment))))))
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (constructor_name))
+              (parenthesized_pattern[0m
+[32m            (variant_pattern
+              (variant_identifier)
+              (formal_parameters[0m
+                (record_pattern
+[31m                  (value_path
+                    (value_name))[0m
+[32m                  (value_identifier)[0m
+                  (record_pattern
+[31m                    (value_path
+                      (value_name))[0m
+[32m                    (value_identifier)[0m
+                    (number))
+[31m                  (value_path
+                    (value_name))
+                  (constructor_pattern
+                    (constructor_path
+                      (constructor_name))
+                    (or_pattern
+                      (parenthesized_pattern
+                        (value_name))
+                      (constructor_pattern
+                        (constructor_path
+                          (constructor_name))
+                        (parenthesized_pattern
+                          (value_name))))))))[0m
+[32m                  (value_identifier)
+                  (or_pattern
+                    (variant_pattern
+                      (variant_identifier)
+                      (formal_parameters
+                        (value_identifier)))
+                    (variant_pattern
+                      (variant_identifier)
+                      (formal_parameters
+                        (value_identifier)))))))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (constructor_name))
+              (parenthesized_pattern[0m
+[32m            (variant_pattern
+              (variant_identifier)
+              (formal_parameters[0m
+                (record_pattern
+[31m                  (value_path
+                    (value_name))
+                  (constructor_pattern
+                    (constructor_path
+                      (constructor_name))))))[0m
+[32m                  (value_identifier)
+                  (variant_pattern
+                    (variant_identifier)))))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (constructor_name))
+              (parenthesized_pattern[0m
+[32m            (variant_pattern
+              (variant_identifier)
+              (formal_parameters[0m
+                (record_pattern
+[31m                  (value_path
+                    (value_name)))))[0m
+[32m                  (value_identifier))))[0m
+            (sequence_expression
+              (expression_statement
+                (number)))))))
+
+
+  16. Switch of lists:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (switch_match
+            (list_pattern
+[31m              (alias_pattern
+                (value_name)
+                (value_name))[0m
+[32m              (value_identifier)
+              (as_aliasing
+                (value_identifier))[0m
+              (spread_pattern
+[31m                (value_name)))[0m
+[32m                (value_identifier)))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+            (list_pattern
+              (number)
+              (number)
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+            (list_pattern
+              (number))
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+            (list_pattern
+              (spread_pattern
+[31m                (value_name)))[0m
+[32m                (value_identifier)))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+            (list_pattern
+              (number)
+              (number)
+[31m              (alias_pattern
+                (spread_pattern
+                  (list_pattern
+                    (value_name)
+                    (spread_pattern
+                      (value_name))))
+                (value_name)))[0m
+[32m              (spread_pattern
+                (list_pattern
+                  (value_identifier)
+                  (spread_pattern
+                    (value_identifier))))
+              (as_aliasing
+                (value_identifier)))[0m
+            (sequence_expression
+              (expression_statement
+[31m                (value_name)))))))[0m
+[32m                (value_identifier)))))))[0m
+
+
+  17. Switch of arrays:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (switch_match
+            (array_pattern
+[31m              (value_name)[0m
+[32m              (value_identifier)[0m
+              (spread_pattern
+[31m                (value_name)))[0m
+[32m                (value_identifier)))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+            (array_pattern
+              (number)
+[31m              (alias_pattern
+                (number)
+                (value_name))
+              (value_name))[0m
+[32m              (number)
+              (as_aliasing
+                (value_identifier))
+              (value_identifier))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+            (array_pattern
+              (number))
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+            (array_pattern
+              (spread_pattern
+[31m                (value_name)))[0m
+[32m                (value_identifier)))[0m
+            (sequence_expression
+              (expression_statement
+                (number)))))))
+
+
+  18. Switch of statements:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+          (parenthesized_expression
+            (pipe_expression
+[31m              (value_name)
+              (value_path
+                (module_path
+                  (module_name))
+                (value_name))))[0m
+[32m              (value_identifier)
+              (value_identifier_path
+                (module_identifier)
+                (value_identifier))))[0m
+          (switch_match
+[31m            pattern: (constructor_pattern
+              (constructor_path
+                (constructor_name))
+              (parenthesized_pattern
+                (value_name)))[0m
+[32m            pattern: (variant_pattern
+              (variant_identifier)
+              (formal_parameters
+                (value_identifier)))[0m
+            body: (sequence_expression
+              (expression_statement
+                (call_expression
+[31m                  function: (value_path
+                    (module_path
+                      (module_name))
+                    (value_name))[0m
+[32m                  function: (value_identifier_path
+                    (module_identifier)
+                    (value_identifier))[0m
+                  arguments: (arguments
+[31m                    (value_name))))[0m
+[32m                    (value_identifier))))[0m
+              (expression_statement
+                (call_expression
+[31m                  function: (value_path
+                    (module_path
+                      (module_name))
+                    (value_name))[0m
+[32m                  function: (value_identifier_path
+                    (module_identifier)
+                    (value_identifier))[0m
+                  arguments: (arguments
+[31m                    (value_name))))))[0m
+[32m                    (value_identifier))))))[0m
+          (switch_match
+[31m            pattern: (constructor_pattern
+              (constructor_path
+                (constructor_name)))[0m
+[32m            pattern: (variant_pattern
+              (variant_identifier))[0m
+            body: (sequence_expression
+              (expression_statement
+                (unit)))))))
+
+
+  19. Switch exceptions:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+          (call_expression
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (arguments
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (switch_match
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+            (exception_pattern
+[31m              (constructor_pattern
+                (constructor_path
+                  (module_path
+                    (module_path
+                      (module_name))
+                    (module_name))
+                  (constructor_name))
+                (parenthesized_pattern
+                  (value_name))))[0m
+[32m              (variant_pattern
+                (nested_variant_identifier
+                  (module_identifier_path
+                    (module_identifier)
+                    (module_identifier))
+                  (variant_identifier))
+                (formal_parameters
+                  (value_identifier))))[0m
+            (sequence_expression
+              (expression_statement
+                (number)))))))
+
+
+  20. Switch block:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+          (block
+            (open_statement
+[31m              (module_path
+                (module_name)))[0m
+[32m              (module_identifier))[0m
+            (expression_statement
+              (call_expression
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (arguments))))
+          (switch_match
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (sequence_expression
+              (expression_statement
+                (number)))))))
+
+
+  21. Switch parenthesized:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (switch_match
+            (parenthesized_pattern
+              (or_pattern
+                (number)
+                (number)))
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (constructor_name))
+              (parenthesized_pattern[0m
+[32m            (variant_pattern
+              (variant_identifier)
+              (formal_parameters[0m
+                (or_pattern
+                  (parenthesized_pattern
+                    (or_pattern
+[31m                      (constructor_pattern
+                        (constructor_path
+                          (constructor_name)))
+                      (constructor_pattern
+                        (constructor_path
+                          (constructor_name)))))
+                  (constructor_pattern
+                    (constructor_path
+                      (constructor_name))))))[0m
+[32m                      (variant_pattern
+                        (variant_identifier))
+                      (variant_pattern
+                        (variant_identifier))))
+                  (variant_pattern
+                    (variant_identifier)))))[0m
+            (sequence_expression
+              (expression_statement
+                (number)))))))
+
+
+  22. Switch ranges:
+
+    (source_file
+      (expression_statement
+        (switch_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (switch_match
+            (range_pattern
+              (character)
+              (character))
+            (sequence_expression
+              (expression_statement
+                (number)))))))
+
+
+  23. Boolean operators:
+
+    (source_file
+      (expression_statement
+        (binary_expression
+[31m          (value_name)
+          (value_name)))[0m
+[32m          (value_identifier)
+          (value_identifier)))[0m
+      (expression_statement
+        (binary_expression
+[31m          (value_name)
+          (value_name)))[0m
+[32m          (value_identifier)
+          (value_identifier)))[0m
+      (expression_statement
+        (binary_expression
+          (binary_expression
+            (unary_expression
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (unary_expression
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (binary_expression
+            (unary_expression
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (unary_expression
+[31m              (value_name))))))[0m
+[32m              (value_identifier))))))[0m
+
+
+  24. String operators:
+
+    (source_file
+      (expression_statement
+        (binary_expression
+[31m          (value_name)
+          (value_name)))[0m
+[32m          (value_identifier)
+          (value_identifier)))[0m
+      (expression_statement
+        (binary_expression
+          (binary_expression
+[31m            (value_name)
+            (value_name))
+          (value_name))))[0m
+[32m            (value_identifier)
+            (value_identifier))
+          (value_identifier))))[0m
+
+
+  25. Coercion operator:
+
+    (source_file
+      (expression_statement
+        (coercion_expression
+[31m          (value_name)
+          (type_constructor_path
+            (type_constructor)))))[0m
+[32m          (value_identifier)
+          (type_identifier))))[0m
+
+
+  26. Ternaries:
+
+    (source_file
+      (expression_statement
+        (ternary_expression
+[31m          (value_name)
+          (value_name)
+          (value_name)))[0m
+[32m          (value_identifier)
+          (value_identifier)
+          (value_identifier)))[0m
+      (expression_statement
+        (ternary_expression
+[31m          (value_name)
+          (value_name)
+          (value_name))))[0m
+[32m          (value_identifier)
+          (value_identifier)
+          (value_identifier))))[0m
+
+
+  27. Lists:
+
+    (source_file
+      (expression_statement
+        (list))
+      (expression_statement
+        (list
+          (number)))
+      (expression_statement
+        (list
+          (number)))
+      (expression_statement
+        (list
+          (number)
+          (number)))
+      (expression_statement
+        (list
+          (number)
+          (number)
+          (spread_element
+[31m            (value_name))))[0m
+[32m            (value_identifier))))[0m
+      (expression_statement
+        (list
+          (spread_element
+[31m            (value_name))[0m
+[32m            (value_identifier))[0m
+          (number)
+          (number))))
+
+
+  28. Member expressions:
+
+    (source_file
+      (expression_statement
+        (member_expression
+          (member_expression
+[31m            (value_name)
+            (value_path
+              (value_name)))
+          (value_path
+            (value_name))))[0m
+[32m            (value_identifier)
+            (property_identifier))
+          (property_identifier)))[0m
+      (expression_statement
+        (member_expression
+[31m          (value_name)
+          (value_path
+            (module_path
+              (module_name))
+            (value_name)))))[0m
+[32m          (value_identifier)
+          (module_identifier)
+          (property_identifier))))[0m
+
+
+  29. Subscript expressions:
+
+    (source_file
+      (expression_statement
+        (subscript_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (number)))
+      (expression_statement
+        (subscript_expression
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (string
+            (string_fragment)))))
+
+
+  30. Variants:
+
+    (source_file
+      (expression_statement
+[31m        (constructor_path
+          (constructor_name)))[0m
+[32m        (variant
+          (variant_identifier)))[0m
+      (expression_statement
+[31m        (call_expression
+          (constructor_path
+            (constructor_name))[0m
+[32m        (variant
+          (variant_identifier)[0m
+          (arguments
+            (number))))
+      (expression_statement
+[31m        (call_expression
+          (constructor_path
+            (constructor_name))[0m
+[32m        (variant
+          (variant_identifier)[0m
+          (arguments
+            (number)
+            (type_annotation
+[31m              (type_constructor_path
+                (type_constructor))))))[0m
+[32m              (type_identifier)))))[0m
+      (expression_statement
+[31m        (call_expression
+          (constructor_path
+            (constructor_name))[0m
+[32m        (variant
+          (variant_identifier)[0m
+          (arguments
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (record
+              (record_field
+[31m                (property_identifier
+                  (value_name))[0m
+[32m                (property_identifier)[0m
+                (number))))))
+      (expression_statement
+[31m        (call_expression
+          (constructor_path
+            (constructor_name))[0m
+[32m        (variant
+          (variant_identifier)[0m
+          (arguments
+            (parenthesized_expression
+              (call_expression
+[31m                (value_path
+                  (module_path
+                    (module_name))
+                  (value_name))[0m
+[32m                (value_identifier_path
+                  (module_identifier)
+                  (value_identifier))[0m
+                (arguments
+[31m                  (value_name)))[0m
+[32m                  (value_identifier)))[0m
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor))))))))[0m
+[32m                (type_identifier)))))))[0m
+
+
+  31. Extensions:
+
+    (source_file
+      (expression_statement
+        (extension_expression
+          (extension_identifier)))
+      (expression_statement
+        (extension_expression
+          (extension_identifier)
+          (expression_statement
+            (string
+              (string_fragment)))))
+      (expression_statement
+        (extension_expression
+          (extension_identifier)
+          (expression_statement
+            (string
+              (string_fragment)))))
+      (expression_statement
+        (extension_expression
+          (extension_identifier)
+          (let_declaration
+            (let_binding
+[31m              pattern: (value_name)[0m
+[32m              pattern: (value_identifier)[0m
+              body: (function
+                parameters: (formal_parameters
+                  (parameter
+[31m                    (value_name))[0m
+[32m                    (value_identifier))[0m
+                  (parameter
+[31m                    (value_name)))[0m
+[32m                    (value_identifier)))[0m
+                body: (binary_expression
+[31m                  left: (value_name)
+                  right: (value_name)))))))[0m
+[32m                  left: (value_identifier)
+                  right: (value_identifier)))))))[0m
+      (expression_statement
+        (extension_expression
+          (extension_identifier)
+          (let_declaration
+            (let_binding
+[31m              pattern: (value_name)[0m
+[32m              pattern: (value_identifier)[0m
+              body: (string
+                (string_fragment))))
+          (let_declaration
+            (let_binding
+[31m              pattern: (value_name)[0m
+[32m              pattern: (value_identifier)[0m
+              body: (number)))))
+      (let_declaration
+        (let_binding
+[31m          pattern: (value_name)[0m
+[32m          pattern: (value_identifier)[0m
+          body: (extension_expression
+            (extension_identifier)
+            (expression_statement
+              (template_string
+                (template_string_content
+                  (escape_sequence)
+                  (escape_sequence)))))))
+      (let_declaration
+        (let_binding
+[31m          pattern: (value_name)[0m
+[32m          pattern: (value_identifier)[0m
+          body: (extension_expression
+            (extension_identifier)
+            (expression_statement
+              (template_string
+                (template_string_content
+                  (escape_sequence)
+                  (escape_sequence)))))))
+      (module_declaration
+        (module_binding
+[31m          name: (module_name)[0m
+[32m          name: (module_identifier)[0m
+          definition: (extension_expression
+            (extension_identifier)
+            (expression_statement
+              (template_string
+                (template_string_content)))))))
+
+
+  32. Raise expression:
+
+    (source_file
+      (expression_statement
+        (call_expression
+[31m          function: (value_name)[0m
+[32m          function: (value_identifier)[0m
+          arguments: (arguments
+[31m            (call_expression
+              function: (constructor_path
+                (constructor_name))
+              arguments: (arguments[0m
+[32m            (variant
+              (variant_identifier)
+              (arguments[0m
+                (record
+                  (record_field
+[31m                    (property_identifier
+                      (value_name))[0m
+[32m                    (property_identifier)[0m
+                    (string
+                      (string_fragment)))))))))
+      (expression_statement
+        (call_expression
+[31m          function: (value_name)[0m
+[32m          function: (value_identifier)[0m
+          arguments: (arguments
+[31m            (constructor_path
+              (constructor_name))))))[0m
+[32m            (variant
+              (variant_identifier))))))[0m
+
+
+  33. Assert expression:
+
+    (source_file
+      (expression_statement
+        (assert_expression
+          (false)))
+      (expression_statement
+        (assert_expression
+          (block
+            (expression_statement
+              (binary_expression
+                (number)
+                (number))))))
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (function
+            (formal_parameters)
+            (assert_expression
+              (false))))))
+
+
+  34. Try-catch:
+
+    (source_file
+      (expression_statement
+        (try_expression
+          (block
+            (expression_statement
+              (call_expression
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (arguments))))
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (constructor_name)))[0m
+[32m            (variant_pattern
+              (variant_identifier))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (constructor_name))
+              (parenthesized_pattern[0m
+[32m            (variant_pattern
+              (variant_identifier)
+              (formal_parameters[0m
+                (record_pattern
+[31m                  (value_path
+                    (value_name))
+                  (value_path
+                    (value_name)))))[0m
+[32m                  (value_identifier)
+                  (value_identifier))))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (module_path
+                  (module_path
+                    (module_name))
+                  (module_name))
+                (constructor_name))
+              (parenthesized_pattern
+                (value_name)))[0m
+[32m            (variant_pattern
+              (nested_variant_identifier
+                (module_identifier_path
+                  (module_identifier)
+                  (module_identifier))
+                (variant_identifier))
+              (formal_parameters
+                (value_identifier)))[0m
+            (sequence_expression
+              (expression_statement
+                (number))))))
+      (expression_statement
+        (try_expression
+          (switch_expression
+            (call_expression
+[31m              (value_name)[0m
+[32m              (value_identifier)[0m
+              (arguments))
+            (switch_match
+              (number)
+              (sequence_expression
+                (expression_statement
+                  (string
+                    (string_fragment)))))
+            (switch_match
+              (number)
+              (sequence_expression
+                (expression_statement
+                  (string
+                    (string_fragment)))))
+            (switch_match
+[31m              (value_name)[0m
+[32m              (value_identifier)[0m
+              (sequence_expression
+                (expression_statement
+                  (string
+                    (string_fragment))))))
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (module_path
+                  (module_path
+                    (module_name))
+                  (module_name))
+                (constructor_name))
+              (parenthesized_pattern
+                (value_name)))[0m
+[32m            (variant_pattern
+              (nested_variant_identifier
+                (module_identifier_path
+                  (module_identifier)
+                  (module_identifier))
+                (variant_identifier))
+              (formal_parameters
+                (value_identifier)))[0m
+            (sequence_expression
+              (expression_statement
+                (string
+                  (string_fragment)))))))
+      (expression_statement
+        (try_expression
+          (for_expression
+[31m            (value_path
+              (value_name))[0m
+[32m            (value_identifier)[0m
+            (number)
+            (number)
+            (block
+              (expression_statement
+                (call_expression
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (arguments)))))
+          (switch_match
+[31m            (constructor_pattern
+              (constructor_path
+                (constructor_name)))[0m
+[32m            (variant_pattern
+              (variant_identifier))[0m
+            (sequence_expression
+              (expression_statement
+                (false)))))))
+
+
+  35. Mutation expressions:
+
+    (source_file
+      (expression_statement
+        (mutation_expression
+          (subscript_expression
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (string
+              (string_fragment)))
+[31m          (value_name)))[0m
+[32m          (value_identifier)))[0m
+      (expression_statement
+        (mutation_expression
+          (member_expression
+[31m            (value_name)
+            (value_path
+              (value_name)))
+          (value_name)))[0m
+[32m            (value_identifier)
+            (property_identifier))
+          (value_identifier)))[0m
+      (expression_statement
+        (mutation_expression
+          (member_expression
+[31m            (value_name)
+            (value_path
+              (value_name)))
+          (value_name))))[0m
+[32m            (value_identifier)
+            (property_identifier))
+          (value_identifier))))[0m
+
+
+  36. For loop:
+
+    (source_file
+      (expression_statement
+        (for_expression
+[31m          (value_path
+            (value_name))[0m
+[32m          (value_identifier)[0m
+          (number)
+          (number)
+          (block
+            (expression_statement
+              (call_expression
+[31m                (value_path
+                  (module_path
+                    (module_name))
+                  (value_name))[0m
+[32m                (value_identifier_path
+                  (module_identifier)
+                  (value_identifier))[0m
+                (arguments
+[31m                  (value_name)))))))[0m
+[32m                  (value_identifier)))))))[0m
+      (expression_statement
+        (for_expression
+[31m          (value_path
+            (value_name))[0m
+[32m          (value_identifier)[0m
+          (number)
+          (number)
+          (block
+            (expression_statement
+              (call_expression
+[31m                (value_path
+                  (module_path
+                    (module_name))
+                  (value_name))[0m
+[32m                (value_identifier_path
+                  (module_identifier)
+                  (value_identifier))[0m
+                (arguments
+[31m                  (value_name))))))))[0m
+[32m                  (value_identifier))))))))[0m
+
+
+  37. While loop:
+
+    (source_file
+      (expression_statement
+        (while_expression
+          (true)
+          (block
+            (expression_statement
+              (call_expression
+[31m                (value_path
+                  (module_path
+                    (module_name))
+                  (value_name))[0m
+[32m                (value_identifier_path
+                  (module_identifier)
+                  (value_identifier))[0m
+                (arguments
+                  (string
+                    (string_fragment)))))))))
+
+
+  38. Await expression:
+
+    (source_file
+      (expression_statement
+        (await_expression
+[31m          (value_name)))[0m
+[32m          (value_identifier)))[0m
+      (expression_statement
+        (await_expression
+          (call_expression
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (arguments))))
+      (expression_statement
+        (binary_expression
+          (await_expression
+            (pipe_expression
+[31m              (value_name)
+              (value_name)))[0m
+[32m              (value_identifier)
+              (value_identifier)))[0m
+          (number))))
+
+
+  39. As aliasing:
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          pattern: (value_name)[0m
+[32m          pattern: (value_identifier)[0m
+          body: (function
+            parameters: (formal_parameters
+              (parameter
+[31m                (alias_pattern
+                  (record_pattern
+                    (value_path
+                      (value_name))
+                    (value_path
+                      (value_name)))
+                  (value_name))[0m
+[32m                (record_pattern
+                  (value_identifier)
+                  (value_identifier))
+                (as_aliasing
+                  (value_identifier))[0m
+                (type_annotation
+[31m                  (type_constructor_path
+                    (module_path
+                      (module_name))
+                    (type_constructor)))))[0m
+[32m                  (type_identifier_path
+                    (module_identifier)
+                    (type_identifier)))))[0m
+            body: (block)))))
+
+
+  40. Lazy Expression:
+
+    (source_file
+      (expression_statement
+        (lazy_expression
+          (block
+            (expression_statement
+              (number)))))
+      (expression_statement
+        (lazy_expression
+          (call_expression
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (arguments)))))
+
+
+  41. Open:
+
+    (source_file
+      (open_statement
+[31m        (module_path
+          (module_name)))[0m
+[32m        (module_identifier))[0m
+      (open_statement
+[31m        (module_path
+          (module_path
+            (module_name))
+          (module_name))))[0m
+[32m        (module_identifier_path
+          (module_identifier)
+          (module_identifier))))[0m
+
+
+  42. Include:
+
+    (source_file
+      (include_statement
+[31m        (module_path
+          (module_name)))[0m
+[32m        (module_identifier))[0m
+      (include_statement
+[31m        (module_path
+          (module_path
+            (module_name))
+          (module_name)))[0m
+[32m        (module_identifier_path
+          (module_identifier)
+          (module_identifier)))[0m
+      (include_statement
+        (functor_use
+[31m          (module_path
+            (module_path
+              (module_name))
+            (module_name))[0m
+[32m          (module_identifier_path
+            (module_identifier)
+            (module_identifier))[0m
+          (arguments
+[31m            (module_path
+              (module_name)))))[0m
+[32m            (module_identifier))))[0m
+      (include_statement
+        (functor_use
+[31m          (module_path
+            (module_path
+              (module_name))
+            (module_name))[0m
+[32m          (module_identifier_path
+            (module_identifier)
+            (module_identifier))[0m
+          (arguments
+            (block
+              (type_declaration
+                (type_binding
+[31m                  (type_constructor_path
+                    (type_constructor))))[0m
+[32m                  (type_identifier)))[0m
+              (let_declaration
+                (let_binding
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (type_annotation
+[31m                    (type_constructor_path
+                      (type_constructor)))))))))[0m
+[32m                    (type_identifier))))))))[0m
+      (include_statement
+        (module_type_of
+[31m          (module_path
+            (module_path
+              (module_name))
+            (module_name))))[0m
+[32m          (module_identifier_path
+            (module_identifier)
+            (module_identifier))))[0m
+      (include_statement
+[31m        (parenthesized_module_type[0m
+[32m        (parenthesized_module_expression[0m
+          (module_type_of
+[31m            (module_path
+              (module_path
+                (module_name))
+              (module_name)))))[0m
+[32m            (module_identifier_path
+              (module_identifier)
+              (module_identifier)))))[0m
+      (include_statement
+[31m        (typed_module_expression
+          (module_path
+            (module_name))[0m
+[32m        (parenthesized_module_expression
+          (module_identifier)[0m
+          (module_type_annotation
+            (module_type_constraint
+              (module_type_of
+[31m                (module_path
+                  (module_name)))[0m
+[32m                (module_identifier))[0m
+              (constrain_module
+[31m                (module_path
+                  (module_path
+                    (module_name))
+                  (module_name))
+                (module_path
+                  (module_path
+                    (module_name))
+                  (module_name)))[0m
+[32m                (module_identifier_path
+                  (module_identifier)
+                  (module_identifier))
+                (module_identifier_path
+                  (module_identifier)
+                  (module_identifier)))[0m
+              (constrain_module
+[31m                (module_path
+                  (module_name))
+                (module_path
+                  (module_path
+                    (module_name))
+                  (module_name)))))))[0m
+[32m                (module_identifier)
+                (module_identifier_path
+                  (module_identifier)
+                  (module_identifier)))))))[0m
+      (include_statement
+        (module_type_of
+          (block
+            (include_statement
+[31m              (module_path
+                (module_name))))))[0m
+[32m              (module_identifier)))))[0m
+      (include_statement
+[31m        (parenthesized_module_expression
+          (block
+            (let_declaration
+              (let_binding
+                (value_name)
+                (call_expression
+                  (value_path
+                    (module_path
+                      (module_name))
+                    (value_name))
+                  (arguments
+                    (string
+                      (string_fragment))))))))))[0m
+[32m        (block
+          (let_declaration
+            (let_binding
+              (value_identifier)
+              (call_expression
+                (value_identifier_path
+                  (module_identifier)
+                  (value_identifier))
+                (arguments
+                  (string
+                    (string_fragment)))))))))[0m
+
+
+  43. Simple definition:
+
+    (source_file
+      (module_declaration
+        (module_binding
+[31m          (module_name)[0m
+[32m          (module_identifier)[0m
+          (block
+            (type_declaration
+              (type_binding
+[31m                (type_constructor_path
+                  (type_constructor))))))))[0m
+[32m                (type_identifier)))))))[0m
+
+
+  44. Signature and definition:
+
+    (source_file
+      (module_declaration
+        (module_binding
+[31m          name: (module_name)[0m
+[32m          name: (module_identifier)[0m
+          signature: (block
+            (let_declaration
+              (let_binding
+[31m                pattern: (value_name)[0m
+[32m                pattern: (value_identifier)[0m
+                (type_annotation
+[31m                  (type_constructor_path
+                    (type_constructor)))))[0m
+[32m                  (type_identifier))))[0m
+            (let_declaration
+              (let_binding
+[31m                pattern: (value_name)[0m
+[32m                pattern: (value_identifier)[0m
+                (type_annotation
+[31m                  (type_constructor_path
+                    (type_constructor)))))[0m
+[32m                  (type_identifier))))[0m
+            (let_declaration
+              (let_binding
+[31m                pattern: (value_name)[0m
+[32m                pattern: (value_identifier)[0m
+                (type_annotation
+[31m                  (type_constructor_path
+                    (type_constructor))))))))[0m
+[32m                  (type_identifier)))))))[0m
+      (module_declaration
+        (module_binding
+[31m          name: (module_name)
+          signature: (module_type_path
+            (module_path
+              (module_name))
+            (module_type_name
+              (module_name)))[0m
+[32m          name: (module_identifier)
+          signature: (module_identifier_path
+            (module_identifier)
+            (module_identifier))[0m
+          definition: (block
+            (type_declaration
+              (type_binding
+[31m                name: (type_constructor_path
+                  (type_constructor)))))))[0m
+[32m                name: (type_identifier))))))[0m
+      (module_declaration
+        (module_binding
+[31m          name: (module_name)[0m
+[32m          name: (module_identifier)[0m
+          signature: (block
+            (type_declaration
+              (type_binding
+[31m                name: (type_constructor_path
+                  (type_constructor)))))[0m
+[32m                name: (type_identifier))))[0m
+          definition: (block
+            (type_declaration
+              (type_binding
+[31m                name: (type_constructor_path
+                  (type_constructor))
+                (type_constructor_path
+                  (type_constructor))))))))[0m
+[32m                name: (type_identifier)
+                (type_identifier)))))))[0m
+
+
+  45. Module types:
+
+    (source_file
+      (module_declaration
+        (module_binding
+[31m          (module_name)[0m
+[32m          (module_identifier)[0m
+          (block
+            (type_declaration
+              (type_binding
+[31m                (type_constructor_path
+                  (type_constructor)))))))[0m
+[32m                (type_identifier))))))[0m
+      (module_declaration
+        (module_binding
+[31m          (module_name)[0m
+[32m          (module_identifier)[0m
+          (module_type_of
+[31m            (module_path
+              (module_path
+                (module_name))
+              (module_name)))))[0m
+[32m            (module_identifier_path
+              (module_identifier)
+              (module_identifier)))))[0m
+      (module_declaration
+        (module_binding
+[31m          (type_constructor))))[0m
+[32m          (type_identifier))))[0m
+
+
+  46. First Class module:
+
+    (source_file
+      (expression_statement
+[31m        (package_expression
+          (module_path
+            (module_name))))[0m
+[32m        (module_pack
+          (module_identifier)))[0m
+      (expression_statement
+[31m        (package_expression
+          (module_path
+            (module_name))[0m
+[32m        (module_pack
+          (module_identifier)[0m
+          (module_type_annotation
+[31m            (module_type_path
+              (module_type_name
+                (module_name))))))[0m
+[32m            (module_identifier))))[0m
+      (expression_statement
+[31m        (package_expression[0m
+[32m        (module_pack[0m
+          (block
+            (type_declaration
+              (type_binding
+[31m                (type_constructor_path
+                  (type_constructor))))[0m
+[32m                (type_identifier)))[0m
+            (let_declaration
+              (let_binding
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (string
+                  (string_fragment)))))
+          (module_type_annotation
+[31m            (module_type_path
+              (module_type_name
+                (module_name))))))[0m
+[32m            (module_identifier))))[0m
+      (expression_statement
+[31m        (package_expression[0m
+[32m        (module_pack[0m
+          (functor_use
+[31m            (module_path
+              (module_name))[0m
+[32m            (module_identifier)[0m
+            (arguments
+              (module_unpack
+[31m                (value_name))))))[0m
+[32m                (value_identifier))))))[0m
+      (module_declaration
+        (module_binding
+[31m          (module_name)[0m
+[32m          (module_identifier)[0m
+          (module_unpack
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (module_type_annotation
+[31m              (module_type_path
+                (module_type_name
+                  (module_name)))))))[0m
+[32m              (module_identifier)))))[0m
+      (module_declaration
+        (module_binding
+[31m          (module_name)[0m
+[32m          (module_identifier)[0m
+          (module_unpack
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (module_type_annotation
+              (module_type_constraint
+[31m                (module_type_path
+                  (module_type_name
+                    (module_name)))[0m
+[32m                (module_identifier)[0m
+                (constrain_type
+[31m                  (type_constructor_path
+                    (type_constructor))
+                  (type_constructor_path
+                    (type_constructor))))))))[0m
+[32m                  (type_identifier)
+                  (type_identifier)))))))[0m
+      (module_declaration
+        (module_binding
+[31m          (module_name)[0m
+[32m          (module_identifier)[0m
+          (module_unpack
+            (call_expression
+[31m              (value_path
+                (module_path
+                  (module_name))
+                (value_name))[0m
+[32m              (value_identifier_path
+                (module_identifier)
+                (value_identifier))[0m
+              (arguments
+[31m                (value_name))))))[0m
+[32m                (value_identifier))))))[0m
+      (module_declaration
+        (module_binding
+[31m          (module_name)[0m
+[32m          (module_identifier)[0m
+          (module_unpack
+            (extension_expression
+              (extension_identifier)
+              (expression_statement
+[31m                (value_name)))))))[0m
+[32m                (value_identifier)))))))[0m
+
+
+  47. Functor definition:
+
+    (source_file
+      (module_declaration
+        (module_binding
+[31m          name: (module_name)[0m
+[32m          name: (module_identifier)[0m
+          definition: (functor
+            parameters: (functor_parameters
+              (functor_parameter
+[31m                (module_path
+                  (module_name))[0m
+[32m                (module_identifier)[0m
+                (module_type_annotation
+                  (block
+                    (type_declaration
+                      (type_binding
+[31m                        name: (type_constructor_path
+                          (type_constructor)))))))[0m
+[32m                        name: (type_identifier))))))[0m
+              (functor_parameter
+[31m                (module_path
+                  (module_name))[0m
+[32m                (module_identifier)[0m
+                (module_type_annotation
+                  (block
+                    (type_declaration
+                      (type_binding
+[31m                        name: (type_constructor_path
+                          (type_constructor))))))))[0m
+[32m                        name: (type_identifier)))))))[0m
+            return_module_type: (module_type_annotation
+              (block
+                (type_declaration
+                  (type_binding
+[31m                    name: (type_constructor_path
+                      (type_constructor))))[0m
+[32m                    name: (type_identifier)))[0m
+                (type_declaration
+                  (type_binding
+[31m                    name: (type_constructor_path
+                      (type_constructor))))))[0m
+[32m                    name: (type_identifier)))))[0m
+            body: (block
+              (type_declaration
+                (type_binding
+[31m                  name: (type_constructor_path
+                    (type_constructor))
+                  (type_constructor_path
+                    (module_path
+                      (module_name))
+                    (type_constructor))))[0m
+[32m                  name: (type_identifier)
+                  (type_identifier_path
+                    (module_identifier)
+                    (type_identifier))))[0m
+              (type_declaration
+                (type_binding
+[31m                  name: (type_constructor_path
+                    (type_constructor))
+                  (type_constructor_path
+                    (module_path
+                      (module_name))
+                    (type_constructor)))))))))[0m
+[32m                  name: (type_identifier)
+                  (type_identifier_path
+                    (module_identifier)
+                    (type_identifier)))))))))[0m
+
+
+  48. Functor signature:
+
+    (source_file
+      (module_declaration
+        (module_binding
+[31m          (module_name)[0m
+[32m          (module_identifier)[0m
+          (functor
+            (functor_parameters
+              (functor_parameter
+[31m                (module_path
+                  (module_name))[0m
+[32m                (module_identifier)[0m
+                (module_type_annotation
+[31m                  (module_type_path
+                    (module_type_name
+                      (module_name))))))[0m
+[32m                  (module_identifier))))[0m
+            (block
+              (let_declaration
+                (let_binding
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (type_annotation
+                    (function_type
+                      (function_type_parameters
+[31m                        (type_constructor_path
+                          (type_constructor)))
+                      (type_constructor_path
+                        (type_constructor)))))))))))[0m
+[32m                        (type_identifier))
+                      (type_identifier))))))))))[0m
+
+
+  49. Functor use:
+
+    (source_file
+      (module_declaration
+        (module_binding
+[31m          (module_name)[0m
+[32m          (module_identifier)[0m
+          (functor_use
+[31m            (module_path
+              (module_name))[0m
+[32m            (module_identifier)[0m
+            (arguments
+[31m              (module_path
+                (module_name))
+              (module_path
+                (module_path
+                  (module_name))
+                (module_name)))))))[0m
+[32m              (module_identifier)
+              (module_identifier_path
+                (module_identifier)
+                (module_identifier)))))))[0m
+
+
+  50. Alias:
+
+    (source_file
+      (module_declaration
+        (module_binding
+[31m          (module_name)
+          (module_path
+            (module_path
+              (module_path
+                (module_name))
+              (module_name))
+            (module_name))))[0m
+[32m          (module_identifier)
+          (module_identifier_path
+            (module_identifier_path
+              (module_identifier)
+              (module_identifier))
+            (module_identifier))))[0m
+      (module_declaration
+        (module_binding
+[31m          (module_name)
+          (module_path
+            (module_name)))))[0m
+[32m          (module_identifier)
+          (module_identifier))))[0m
+
+
+  51. Recursive:
+
+    (source_file
+      (module_declaration
+        (module_binding
+[31m          (module_name)[0m
+[32m          (module_identifier)[0m
+          (block
+            (include_statement
+[31m              (module_path
+                (module_name))))
+          (module_path
+            (module_name))))[0m
+[32m              (module_identifier)))
+          (module_identifier)))[0m
+      (module_declaration
+        (module_binding
+[31m          (module_name)
+          (module_type_path
+            (module_type_name
+              (module_name)))[0m
+[32m          (module_identifier)
+          (module_identifier)[0m
+          (block
+            (let_declaration
+              (let_binding
+[31m                (value_name)
+                (value_path
+                  (module_path
+                    (module_name))
+                  (value_name))))))[0m
+[32m                (value_identifier)
+                (value_identifier_path
+                  (module_identifier)
+                  (value_identifier))))))[0m
+        (module_binding
+[31m          (module_name)
+          (module_type_path
+            (module_type_name
+              (module_name)))[0m
+[32m          (module_identifier)
+          (module_identifier)[0m
+          (block
+            (let_declaration
+              (let_binding
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (number)))))))
+
+
+  52. Definition through extension:
+
+    (source_file
+      (module_declaration
+        (module_binding
+[31m          (module_name)[0m
+[32m          (module_identifier)[0m
+          (extension_expression
+            (extension_identifier)
+            (expression_statement
+              (unit))))))
+
+
+  53. Externals:
+
+    (source_file
+      (external_declaration
+[31m        (value_name)[0m
+[32m        (value_identifier)[0m
+        (type_annotation
+          (function_type
+            (function_type_parameters
+[31m              (type_constructor_path
+                (type_constructor)))
+            (type_constructor_path
+              (type_constructor))))[0m
+[32m              (type_identifier))
+            (type_identifier)))[0m
+        (string
+          (string_fragment)))
+      (decorator
+        (decorator_identifier))
+      (external_declaration
+[31m        (value_name)[0m
+[32m        (value_identifier)[0m
+        (type_annotation
+[31m          (type_constructor_path
+            (type_constructor)))[0m
+[32m          (type_identifier))[0m
+        (string
+          (string_fragment)))
+      (decorator
+        (decorator_identifier))
+      (external_declaration
+[31m        (value_name)[0m
+[32m        (value_identifier)[0m
+        (type_annotation
+[31m          (type_constructor_path
+            (type_constructor)))[0m
+[32m          (type_identifier))[0m
+        (string
+          (string_fragment)))
+      (decorator
+        (decorator_identifier)
+        (decorator_arguments
+          (string
+            (string_fragment))))
+      (decorator
+        (decorator_identifier))
+      (external_declaration
+[31m        (value_name)[0m
+[32m        (value_identifier)[0m
+        (type_annotation
+[31m          (type_constructor_path
+            (type_constructor)))[0m
+[32m          (type_identifier))[0m
+        (string
+          (string_fragment)))
+      (external_declaration
+[31m        (value_name)[0m
+[32m        (value_identifier)[0m
+        (type_annotation
+          (function_type
+            (function_type_parameters
+              (parameter
+                (object_type))
+              (parameter
+                (uncurry)
+                (unit_type)))
+            (object_type)))
+        (string
+          (string_fragment)))
+      (decorator
+        (decorator_identifier))
+      (external_declaration
+[31m        (value_name)[0m
+[32m        (value_identifier)[0m
+        (type_annotation
+          (function_type
+            (function_type_parameters
+              (parameter
+[31m                (type_constructor_path
+                  (module_path
+                    (module_name))
+                  (type_constructor)))[0m
+[32m                (type_identifier_path
+                  (module_identifier)
+                  (type_identifier)))[0m
+              (decorator
+                (decorator_identifier)
+                (decorator_arguments
+                  (template_string
+                    (template_string_content))))
+              (parameter
+[31m                (type_constructor_path
+                  (type_constructor)))[0m
+[32m                (type_identifier))[0m
+              (decorator
+                (decorator_identifier)
+                (decorator_arguments
+                  (string)))
+              (parameter
+[31m                (type_constructor_path
+                  (type_constructor)))[0m
+[32m                (type_identifier))[0m
+              (parameter
+                (labeled_parameter
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (type_annotation
+[31m                    (type_constructor_path
+                      (type_constructor))))))[0m
+[32m                    (type_identifier)))))[0m
+            (unit_type)))
+        (string
+          (string_fragment)))
+      (decorator
+        (decorator_identifier))
+      (external_declaration
+[31m        (value_name)[0m
+[32m        (value_identifier)[0m
+        (type_annotation
+          (function_type
+            (function_type_parameters
+              (parameter
+[31m                (type_constructor_path
+                  (type_constructor)))[0m
+[32m                (type_identifier))[0m
+              (parameter
+                (labeled_parameter
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (type_annotation
+                    (decorator
+                      (decorator_identifier))
+                    (polyvar_type
+                      (polyvar_declaration
+                        (polyvar_identifier)
+                        (polyvar_parameters
+[31m                          (type_constructor_path
+                            (module_path
+                              (module_name))
+                            (type_constructor))))[0m
+[32m                          (type_identifier_path
+                            (module_identifier)
+                            (type_identifier))))[0m
+                      (polyvar_declaration
+                        (polyvar_identifier)
+                        (polyvar_parameters
+[31m                          (type_constructor_path
+                            (module_path
+                              (module_name))
+                            (type_constructor)))))))))[0m
+[32m                          (type_identifier_path
+                            (module_identifier)
+                            (type_identifier)))))))))[0m
+            (unit_type)))
+        (string
+          (string_fragment))))
+
+
+  54. Exception declaration:
+
+    (source_file
+      (exception_declaration
+[31m        (constructor_name)[0m
+[32m        (variant_identifier)[0m
+        (variant_parameters
+[31m          (type_constructor_path
+            (type_constructor))))[0m
+[32m          (type_identifier)))[0m
+      (exception_declaration
+[31m        (constructor_name)
+        (constructor_path
+          (constructor_name)))[0m
+[32m        (variant_identifier)
+        (variant_identifier))[0m
+      (exception_declaration
+[31m        (constructor_name)
+        (constructor_path
+          (module_path
+            (module_name))
+          (constructor_name))))[0m
+[32m        (variant_identifier)
+        (nested_variant_identifier
+          (module_identifier)
+          (variant_identifier))))[0m
+
+
+  55. Module Constraints:
+
+    (source_file
+      (expression_statement
+[31m        (package_expression
+          (module_path
+            (module_name))[0m
+[32m        (module_pack
+          (module_identifier)[0m
+          (module_type_annotation
+            (module_type_constraint
+[31m              (module_type_path
+                (module_type_name
+                  (module_name)))[0m
+[32m              (module_identifier)[0m
+              (constrain_type
+[31m                (type_constructor_path
+                  (type_constructor))
+                (type_constructor_path
+                  (type_constructor)))[0m
+[32m                (type_identifier)
+                (type_identifier))[0m
+              (constrain_type
+[31m                (type_constructor_path
+                  (type_constructor))
+                (type_constructor_path
+                  (type_constructor)))))))[0m
+[32m                (type_identifier)
+                (type_identifier))))))[0m
+      (module_declaration
+        (module_binding
+[31m          name: (module_name)[0m
+[32m          name: (module_identifier)[0m
+          definition: (functor
+            parameters: (functor_parameters)
+            return_module_type: (module_type_annotation
+[31m              (parenthesized_module_type[0m
+[32m              (parenthesized_module_expression[0m
+                (module_type_constraint
+[31m                  (module_type_path
+                    (module_type_name
+                      (module_name)))[0m
+[32m                  (module_identifier)[0m
+                  (constrain_type
+[31m                    (type_constructor_path
+                      (type_constructor))
+                    (type_constructor_path
+                      (type_constructor))))))[0m
+[32m                    (type_identifier)
+                    (type_identifier)))))[0m
+            body: (block))))
+      (module_declaration
+        (module_binding
+[31m          name: (module_name)[0m
+[32m          name: (module_identifier)[0m
+          definition: (functor
+            parameters: (functor_parameters
+              (functor_parameter
+[31m                (module_path
+                  (module_name))[0m
+[32m                (module_identifier)[0m
+                (module_type_annotation
+[31m                  (module_type_path
+                    (module_type_name
+                      (module_name)))))[0m
+[32m                  (module_identifier)))[0m
+              (functor_parameter
+[31m                (module_path
+                  (module_name))[0m
+[32m                (module_identifier)[0m
+                (module_type_annotation
+[31m                  (module_type_path
+                    (module_type_name
+                      (module_name))))))[0m
+[32m                  (module_identifier))))[0m
+            return_module_type: (module_type_annotation
+[31m              (parenthesized_module_type[0m
+[32m              (parenthesized_module_expression[0m
+                (module_type_constraint
+[31m                  (parenthesized_module_type[0m
+[32m                  (parenthesized_module_expression[0m
+                    (module_type_constraint
+[31m                      (module_type_path
+                        (module_type_name
+                          (module_name)))[0m
+[32m                      (module_identifier)[0m
+                      (constrain_type
+[31m                        (type_constructor_path
+                          (type_constructor))
+                        (type_constructor_path
+                          (type_constructor)))))[0m
+[32m                        (type_identifier)
+                        (type_identifier))))[0m
+                  (constrain_type
+[31m                    (type_constructor_path
+                      (type_constructor))
+                    (type_constructor_path
+                      (type_constructor))))))[0m
+[32m                    (type_identifier)
+                    (type_identifier)))))[0m
+            body: (block)))))
+
+
+  56. Template strings:
+
+    (source_file
+      (expression_statement
+        (template_string))
+      (expression_statement
+        (template_string
+          (template_string_content)))
+      (expression_statement
+        (template_string
+          (template_string_content
+            (escape_sequence))))
+      (expression_statement
+        (template_string
+          (template_string_content)))
+      (expression_statement
+        (template_string
+          (template_string_content)))
+      (expression_statement
+        (template_string
+          (template_string_content)))
+      (expression_statement
+        (template_string
+          (template_string_content
+            (template_substitution
+              (binary_expression
+                (number)
+                (number)))
+            (template_substitution
+              (binary_expression
+                (number)
+                (number))))))
+      (expression_statement
+        (template_string
+          (template_string_content
+            (escape_sequence)
+            (template_substitution
+              (call_expression
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (arguments
+                  (string
+                    (string_fragment)))))
+            (escape_sequence)
+            (template_substitution
+[31m              (value_name)))))[0m
+[32m              (value_identifier)))))[0m
+      (expression_statement
+        (template_string
+          (template_string_content)))
+      (expression_statement
+        (template_string
+          (template_string_content
+            (escape_sequence))))
+      (expression_statement
+        (template_string
+          (template_string_content))))
+
+
+  57. Polyvars:
+
+    (source_file
+      (expression_statement
+        (polyvar
+          (polyvar_identifier)))
+      (expression_statement
+        (polyvar
+          (polyvar_identifier)
+[31m          (call_arguments[0m
+[32m          (arguments[0m
+            (number))))
+      (expression_statement
+        (polyvar
+          (polyvar_identifier
+            (polyvar_string
+              (string_fragment)))))
+      (expression_statement
+        (polyvar
+          (polyvar_identifier
+            (polyvar_string
+              (string_fragment)))))
+      (expression_statement
+        (polyvar
+          (polyvar_identifier))))
+
+
+  58. Simple JSX elements:
+
+    (source_file
+      (expression_statement
+        (jsx_self_closing_element
+          (jsx_identifier)
+          (jsx_attribute
+            (property_identifier)
+            (string
+              (string_fragment)))
+          (jsx_attribute
+            (property_identifier)
+            (jsx_expression
+              (expression_statement
+                (number))))))
+      (expression_statement
+        (jsx_element
+          (jsx_opening_element
+[31m            (jsx_identifier
+              (module_path
+                (module_name))
+              (constructor_name)))
+          (value_path
+            (value_name))[0m
+[32m            (nested_jsx_identifier
+              (jsx_identifier)
+              (jsx_identifier)))
+          (value_identifier)[0m
+          (jsx_element
+            (jsx_opening_element
+              (jsx_identifier))
+[31m            (value_path
+              (value_name))[0m
+[32m            (value_identifier)[0m
+            (jsx_closing_element
+              (jsx_identifier)))
+[31m          (value_path
+            (value_name))[0m
+[32m          (value_identifier)[0m
+          (jsx_closing_element
+[31m            (jsx_identifier
+              (module_path
+                (module_name))
+              (constructor_name)))))[0m
+[32m            (nested_jsx_identifier
+              (jsx_identifier)
+              (jsx_identifier)))))[0m
+      (expression_statement
+        (jsx_element
+          (jsx_opening_element
+[31m            (jsx_identifier
+              (module_path
+                (module_path
+                  (module_path
+                    (module_name))
+                  (module_name))
+                (module_name))
+              (constructor_name)))[0m
+[32m            (nested_jsx_identifier
+              (nested_jsx_identifier
+                (nested_jsx_identifier
+                  (jsx_identifier)
+                  (jsx_identifier))
+                (jsx_identifier))
+              (jsx_identifier)))[0m
+          (jsx_closing_element
+[31m            (jsx_identifier
+              (module_path
+                (module_path
+                  (module_path
+                    (module_name))
+                  (module_name))
+                (module_name))
+              (constructor_name)))))[0m
+[32m            (nested_jsx_identifier
+              (nested_jsx_identifier
+                (nested_jsx_identifier
+                  (jsx_identifier)
+                  (jsx_identifier))
+                (jsx_identifier))
+              (jsx_identifier)))))[0m
+      (expression_statement
+        (jsx_element
+          (jsx_opening_element
+            (jsx_identifier))
+[31m          (value_path
+            (module_path
+              (module_name))
+            (value_name))[0m
+[32m          (value_identifier_path
+            (module_identifier)
+            (value_identifier))[0m
+          (jsx_closing_element
+            (jsx_identifier))))
+      (expression_statement
+        (jsx_element
+          (jsx_opening_element
+            (jsx_identifier))
+          (member_expression
+[31m            (value_name)
+            (value_path
+              (value_name)))[0m
+[32m            (value_identifier)
+            (property_identifier))[0m
+          (jsx_closing_element
+            (jsx_identifier)))))
+
+
+  59. Attribute values:
+
+    (source_file
+      (expression_statement
+        (jsx_self_closing_element
+[31m          (jsx_identifier
+            (constructor_name))[0m
+[32m          (jsx_identifier)[0m
+          (jsx_attribute
+            (property_identifier)
+            (number))
+          (jsx_attribute
+            (property_identifier)
+            (polyvar
+              (polyvar_identifier)))
+          (jsx_attribute
+            (property_identifier)
+[31m            (constructor_path
+              (constructor_name)))[0m
+[32m            (variant
+              (variant_identifier)))[0m
+          (jsx_attribute
+            (property_identifier))
+          (jsx_attribute
+            (property_identifier))
+          (jsx_attribute
+            (property_identifier)
+            (jsx_expression
+              (expression_statement
+[31m                (value_name))))))[0m
+[32m                (value_identifier))))))[0m
+      (expression_statement
+        (jsx_self_closing_element
+[31m          (jsx_identifier
+            (constructor_name))[0m
+[32m          (jsx_identifier)[0m
+          (jsx_attribute
+            (property_identifier)
+            (pipe_expression
+[31m              (value_name)
+              (value_name)))[0m
+[32m              (value_identifier)
+              (value_identifier)))[0m
+          (jsx_attribute
+            (property_identifier)
+            (true)))))
+
+
+  60. Anonymous JSX element:
+
+    (source_file
+      (expression_statement
+        (jsx_fragment))
+      (expression_statement
+        (jsx_element
+          (jsx_opening_element
+[31m            (jsx_identifier
+              (constructor_name)))[0m
+[32m            (jsx_identifier))[0m
+          (jsx_fragment)
+          (jsx_closing_element
+[31m            (jsx_identifier
+              (constructor_name))))))[0m
+[32m            (jsx_identifier)))))[0m
+
+
+  61. Block children:
+
+    (source_file
+      (expression_statement
+        (jsx_element
+          (jsx_opening_element
+            (jsx_identifier))
+          (block
+            (let_declaration
+              (let_binding
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (string
+                  (string_fragment))))
+            (expression_statement
+              (jsx_element
+                (jsx_opening_element
+                  (jsx_identifier)
+                  (jsx_attribute
+                    (property_identifier)))
+                (block
+                  (expression_statement
+                    (call_expression
+[31m                      (value_path
+                        (module_path
+                          (module_name))
+                        (value_name))[0m
+[32m                      (value_identifier_path
+                        (module_identifier)
+                        (value_identifier))[0m
+                      (arguments
+                        (string
+                          (string_fragment))))))
+                (jsx_closing_element
+                  (jsx_identifier)))))
+          (jsx_closing_element
+            (jsx_identifier)))))
+
+
+  62. Children spread:
+
+    (source_file
+      (expression_statement
+        (jsx_element
+          (jsx_opening_element
+[31m            (jsx_identifier
+              (constructor_name)))[0m
+[32m            (jsx_identifier))[0m
+          (spread_element
+[31m            (value_name))[0m
+[32m            (value_identifier))[0m
+          (jsx_closing_element
+[31m            (jsx_identifier
+              (constructor_name))))))[0m
+[32m            (jsx_identifier)))))[0m
+
+
+  63. Attribute Block:
+
+    (source_file
+      (expression_statement
+        (jsx_element
+          (jsx_opening_element
+[31m            (jsx_identifier
+              (constructor_name))[0m
+[32m            (jsx_identifier)[0m
+            (jsx_attribute
+              (property_identifier)
+              (jsx_expression
+                (expression_statement
+                  (call_expression
+[31m                    (value_path
+                      (module_path
+                        (module_name))
+                      (value_name))[0m
+[32m                    (value_identifier_path
+                      (module_identifier)
+                      (value_identifier))[0m
+                    (arguments
+                      (string
+                        (string_fragment)))))))
+            (jsx_attribute
+              (property_identifier)
+              (jsx_expression
+                (open_statement
+[31m                  (module_path
+                    (module_name)))[0m
+[32m                  (module_identifier))[0m
+                (expression_statement
+                  (record
+                    (record_field
+[31m                      (property_identifier
+                        (value_name))
+                      (value_name))[0m
+[32m                      (property_identifier)
+                      (value_identifier))[0m
+                    (record_field
+[31m                      (property_identifier
+                        (value_name))[0m
+[32m                      (property_identifier)[0m
+                      (false)))))))
+          (jsx_self_closing_element
+[31m            (jsx_identifier
+              (constructor_name)))[0m
+[32m            (jsx_identifier))[0m
+          (jsx_closing_element
+[31m            (jsx_identifier
+              (constructor_name))))))[0m
+[32m            (jsx_identifier)))))[0m
+
+
+  64. Spread props:
+
+    (source_file
+      (expression_statement
+        (jsx_self_closing_element
+          (jsx_identifier)
+          (jsx_expression
+            (spread_element
+[31m              (value_name)))))[0m
+[32m              (value_identifier)))))[0m
+      (expression_statement
+        (jsx_element
+          (jsx_opening_element
+[31m            (jsx_identifier
+              (constructor_name))[0m
+[32m            (jsx_identifier)[0m
+            (jsx_expression
+              (spread_element
+[31m                (value_name))))[0m
+[32m                (value_identifier))))[0m
+          (jsx_closing_element
+[31m            (jsx_identifier
+              (constructor_name))))))[0m
+[32m            (jsx_identifier)))))[0m
+
+
+  65. Decorator with type:
+
+    (source_file
+      (decorator
+        (decorator_identifier)
+        (decorator_arguments
+          (type_annotation
+[31m            (type_constructor_path
+              (type_constructor))))))[0m
+[32m            (type_identifier)))))[0m
+
+
+  66. Plain:
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (number)))
+      (let_declaration
+        (let_binding
+[31m          (value_name)
+          (value_name)))[0m
+[32m          (value_identifier)
+          (value_identifier)))[0m
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (polyvar
+            (polyvar_identifier))))
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (number)))
+      (let_declaration
+        (let_binding
+[31m          (value_name)
+          (value_name)))[0m
+[32m          (value_identifier)
+          (value_identifier)))[0m
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (number)))
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (number)))
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (number))))
+
+
+  67. Tuple destructuring:
+
+    (source_file
+      (let_declaration
+        (let_binding
+          (tuple_pattern
+            (tuple_item_pattern
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (tuple_item_pattern
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (tuple_item_pattern
+              (tuple_pattern
+                (tuple_item_pattern
+[31m                  (value_name))[0m
+[32m                  (value_identifier))[0m
+                (tuple_item_pattern
+[31m                  (value_name)))))
+          (value_name)))[0m
+[32m                  (value_identifier)))))
+          (value_identifier)))[0m
+      (let_declaration
+        (let_binding
+          (tuple_pattern
+            (tuple_item_pattern
+[31m              (value_name)[0m
+[32m              (value_identifier)[0m
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor))))[0m
+[32m                (type_identifier)))[0m
+            (tuple_item_pattern
+[31m              (value_name)))
+          (value_name)))[0m
+[32m              (value_identifier)))
+          (value_identifier)))[0m
+      (let_declaration
+        (let_binding
+          (tuple_pattern
+            (tuple_item_pattern
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (tuple_item_pattern
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (tuple_item_pattern
+              (unit)))
+[31m          (value_name))))[0m
+[32m          (value_identifier))))[0m
+
+
+  68. Record destructuring:
+
+    (source_file
+      (let_declaration
+        (let_binding
+          (record_pattern
+[31m            (value_path
+              (value_name))
+            (value_path
+              (value_name)))
+          (value_name)))[0m
+[32m            (value_identifier)
+            (value_identifier))
+          (value_identifier)))[0m
+      (let_declaration
+        (let_binding
+          (record_pattern
+[31m            (value_path
+              (value_name))
+            (value_path
+              (value_name))
+            (value_name))
+          (value_name)))[0m
+[32m            (value_identifier)
+            (value_identifier)
+            (value_identifier))
+          (value_identifier)))[0m
+      (let_declaration
+        (let_binding
+          (record_pattern
+[31m            (value_path
+              (module_path
+                (module_path
+                  (module_name))
+                (module_name))
+              (value_name))
+            (value_name))
+          (value_name))))[0m
+[32m            (value_identifier_path
+              (module_identifier_path
+                (module_identifier)
+                (module_identifier))
+              (value_identifier))
+            (value_identifier))
+          (value_identifier))))[0m
+
+
+  69. Array destructuring:
+
+    (source_file
+      (let_declaration
+        (let_binding
+          (array_pattern
+[31m            (value_name)
+            (value_name))
+          (value_name)))[0m
+[32m            (value_identifier)
+            (value_identifier))
+          (value_identifier)))[0m
+      (let_declaration
+        (let_binding
+          (array_pattern
+[31m            (value_name)
+            (value_name)
+            (value_name))
+          (value_name)))[0m
+[32m            (value_identifier)
+            (value_identifier)
+            (value_identifier))
+          (value_identifier)))[0m
+      (let_declaration
+        (let_binding
+          (array_pattern
+            (decorator
+              (decorator_identifier))
+[31m            (value_name)
+            (value_name))
+          (value_name))))[0m
+[32m            (value_identifier)
+            (value_identifier))
+          (value_identifier))))[0m
+
+
+  70. List destructuring:
+
+    (source_file
+      (let_declaration
+        (let_binding
+          (list_pattern
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (spread_pattern
+[31m              (value_name)))
+          (value_name)))[0m
+[32m              (value_identifier)))
+          (value_identifier)))[0m
+      (let_declaration
+        (let_binding
+          (list_pattern
+            (decorator
+              (decorator_identifier))
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (spread_pattern
+[31m              (value_name)))
+          (value_name))))[0m
+[32m              (value_identifier)))
+          (value_identifier))))[0m
+
+
+  71. Block:
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (block
+            (expression_statement
+              (number))
+            (expression_statement
+              (number))))))
+
+
+  72. Annotated:
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (type_annotation
+[31m            (type_constructor_path
+              (type_constructor)))[0m
+[32m            (type_identifier))[0m
+          (number)))
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (type_annotation
+            (function_type
+              (function_type_parameters
+[31m                (type_constructor_path
+                  (type_constructor)))[0m
+[32m                (type_identifier))[0m
+              (unit_type)))
+[31m          (value_name))))[0m
+[32m          (value_identifier))))[0m
+
+
+  73. Recursive:
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (function
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (call_expression
+[31m              (value_name)[0m
+[32m              (value_identifier)[0m
+              (arguments
+                (binary_expression
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (number))))))))
+
+
+  74. Unit:
+
+    (source_file
+      (let_declaration
+        (let_binding
+          (unit)
+[31m          (value_name))))[0m
+[32m          (value_identifier))))[0m
+
+
+  75. And (Primitives):
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (number))
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (number))))
+
+
+  76. And (Functions):
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (function
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (binary_expression
+[31m              (value_name)[0m
+[32m              (value_identifier)[0m
+              (call_expression
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (arguments
+[31m                  (value_name))))))[0m
+[32m                  (value_identifier))))))[0m
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (function
+[31m            (value_name)[0m
+[32m            (value_identifier)[0m
+            (binary_expression
+[31m              (value_name)[0m
+[32m              (value_identifier)[0m
+              (number))))))
+
+
+  77. And (decorated):
+
+    (source_file
+      (decorator
+        (decorator_identifier))
+      (let_declaration
+        (let_binding
+[31m          (value_name)
+          (value_name))[0m
+[32m          (value_identifier)
+          (value_identifier))[0m
+        (decorator
+          (decorator_identifier))
+        (decorator
+          (decorator_identifier))
+        (let_binding
+[31m          (value_name)
+          (value_name))[0m
+[32m          (value_identifier)
+          (value_identifier))[0m
+        (decorator
+          (decorator_identifier))
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (number))))
+
+
+  78. Labled function with uncurried:
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (function
+            (formal_parameters
+              (parameter
+                (uncurry)
+                (labeled_parameter
+[31m                  (value_name))))[0m
+[32m                  (value_identifier))))[0m
+            (unit)))))
+
+
+  79. Destructuring module:
+
+    (source_file
+      (let_declaration
+        (let_binding
+          (record_pattern
+[31m            (value_path
+              (value_name))
+            (value_path
+              (value_name)))
+          (package_expression
+            (module_path
+              (module_name)))))[0m
+[32m            (value_identifier)
+            (value_identifier))
+          (module_pack
+            (module_identifier))))[0m
+      (let_declaration
+        (let_binding
+          (record_pattern
+[31m            (value_path
+              (value_name))
+            (value_path
+              (value_name)))
+          (package_expression
+            (module_path
+              (module_path
+                (module_name))
+              (module_name))))))[0m
+[32m            (value_identifier)
+            (value_identifier))
+          (module_pack
+            (module_identifier_path
+              (module_identifier)
+              (module_identifier))))))[0m
+
+
+  80. Packing module:
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          (value_name)
+          (package_expression
+            (module_path
+              (module_name))))))[0m
+[32m          (value_identifier)
+          (module_pack
+            (module_identifier)))))[0m
+
+
+  81. Unpacking module:
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          (package_pattern
+            (module_name))
+          (value_name))))[0m
+[32m          (module_pack
+            (module_identifier))
+          (value_identifier))))[0m
+
+
+  82. Lazy Values:
+
+    (source_file
+      (let_declaration
+        (let_binding
+          (lazy_pattern
+[31m            (value_name))[0m
+[32m            (value_identifier))[0m
+          (lazy_expression
+            (parenthesized_expression
+              (number))))))
+
+
+  83. Opaque:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))))[0m
+[32m          (type_identifier)))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))))[0m
+[32m          (type_identifier)))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))))[0m
+[32m          (type_identifier)))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor)))[0m
+[32m          (type_identifier))[0m
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor)))))[0m
+[32m          (type_identifier))))[0m
+
+
+  84. Export:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor)))))[0m
+[32m          (type_identifier))))[0m
+
+
+  85. Alias:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))
+          (type_constructor_path
+            (module_path
+              (module_path
+                (module_name))
+              (module_name))
+            (type_constructor)))))[0m
+[32m          (type_identifier)
+          (type_identifier_path
+            (module_identifier_path
+              (module_identifier)
+              (module_identifier))
+            (type_identifier)))))[0m
+
+
+  86. Private:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))
+          (type_constructor_path
+            (type_constructor)))))[0m
+[32m          (type_identifier)
+          (type_identifier))))[0m
+
+
+  87. Tuple type:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (tuple_type
+[31m            (type_constructor_path
+              (type_constructor))
+            (type_constructor_path
+              (type_constructor))
+            (type_constructor_path
+              (type_constructor))))))[0m
+[32m            (type_identifier)
+            (type_identifier)
+            (type_identifier)))))[0m
+
+
+  88. Record type:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (record_type
+            (record_type_field
+              (property_identifier)
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor))))[0m
+[32m                (type_identifier)))[0m
+            (record_type_field
+              (property_identifier)
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor))))[0m
+[32m                (type_identifier)))[0m
+            (decorator
+              (decorator_identifier)
+              (decorator_arguments
+                (string
+                  (string_fragment))))
+            (record_type_field
+              (property_identifier)
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor))))[0m
+[32m                (type_identifier)))[0m
+            (record_type_field
+              (property_identifier)
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor))))[0m
+[32m                (type_identifier)))[0m
+            (record_type_field
+              (property_identifier)
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor)))))))[0m
+[32m                (type_identifier))))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))
+          (type_constructor_path
+            (module_path
+              (module_name))
+            (type_constructor))[0m
+[32m          (type_identifier)
+          (type_identifier_path
+            (module_identifier)
+            (type_identifier))[0m
+          (record_type
+            (record_type_field
+              (property_identifier)
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor)))))))[0m
+[32m                (type_identifier))))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (record_type))))
+
+
+  89. Extensible Variant:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))))[0m
+[32m          (type_identifier)))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (variant_type
+            (variant_declaration
+[31m              (constructor_name)))))[0m
+[32m              (variant_identifier)))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (module_path
+              (module_name))
+            (type_constructor))[0m
+[32m          (type_identifier_path
+            (module_identifier)
+            (type_identifier))[0m
+          (variant_type
+            (variant_declaration
+[31m              (constructor_name))[0m
+[32m              (variant_identifier))[0m
+            (variant_declaration
+[31m              (constructor_name))))))[0m
+[32m              (variant_identifier))))))[0m
+
+
+  90. Variant:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (variant_type
+            (variant_declaration
+[31m              (constructor_name))[0m
+[32m              (variant_identifier))[0m
+            (variant_declaration
+[31m              (constructor_name))[0m
+[32m              (variant_identifier))[0m
+            (decorator
+              (decorator_identifier)
+              (decorator_arguments
+                (string
+                  (string_fragment))))
+            (variant_declaration
+[31m              (constructor_name))[0m
+[32m              (variant_identifier))[0m
+            (variant_declaration
+[31m              (constructor_name)[0m
+[32m              (variant_identifier)[0m
+              (variant_parameters
+[31m                (type_constructor_path
+                  (type_constructor))))[0m
+[32m                (type_identifier)))[0m
+            (variant_declaration
+[31m              (constructor_name)[0m
+[32m              (variant_identifier)[0m
+              (variant_parameters
+                (record_type
+                  (record_type_field
+                    (property_identifier)
+                    (type_annotation
+[31m                      (type_constructor_path
+                        (type_constructor))))[0m
+[32m                      (type_identifier)))[0m
+                  (record_type_field
+                    (property_identifier)
+                    (type_annotation
+[31m                      (type_constructor_path
+                        (type_constructor)))))))[0m
+[32m                      (type_identifier))))))[0m
+            (variant_declaration
+[31m              (constructor_name)[0m
+[32m              (variant_identifier)[0m
+              (variant_parameters
+[31m                (package_type
+                  (module_type_path
+                    (module_type_name
+                      (module_name))))))[0m
+[32m                (module_pack
+                  (module_identifier))))[0m
+            (variant_declaration
+[31m              (constructor_name)[0m
+[32m              (variant_identifier)[0m
+              (variant_parameters
+[31m                (package_type
+                  (module_type_path
+                    (module_path
+                      (module_name))
+                    (module_type_name)))))))))[0m
+[32m                (module_pack
+                  (type_identifier_path
+                    (module_identifier)
+                    (type_identifier)))))))))[0m
+
+
+  91. Annotated variant:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (variant_type
+            (variant_declaration
+[31m              (constructor_name)[0m
+[32m              (variant_identifier)[0m
+              (variant_parameters
+[31m                (type_constructor_path
+                  (type_constructor)))[0m
+[32m                (type_identifier))[0m
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor))))))))[0m
+[32m                (type_identifier)))))))[0m
+
+
+  92. Polyvar:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (polyvar_type
+            (polyvar_declaration
+              (polyvar_identifier))
+            (polyvar_declaration
+              (polyvar_identifier))
+            (polyvar_declaration
+              (polyvar_identifier)
+              (polyvar_parameters
+[31m                (type_constructor_path
+                  (type_constructor))))[0m
+[32m                (type_identifier)))[0m
+            (polyvar_declaration
+              (polyvar_identifier
+                (polyvar_string
+                  (string_fragment))))
+            (polyvar_declaration
+              (polyvar_identifier
+                (polyvar_string
+                  (string_fragment))))
+            (polyvar_declaration
+              (polyvar_identifier))
+            (decorator
+              (decorator_identifier)
+              (decorator_arguments
+                (string
+                  (string_fragment))))
+            (polyvar_declaration
+              (polyvar_identifier))
+            (polyvar_declaration
+[31m              (type_constructor_path
+                (type_constructor))))))[0m
+[32m              (type_identifier)))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (type_parameters
+[31m            (type_constructor))[0m
+[32m            (type_identifier))[0m
+          (decorator
+            (decorator_identifier))
+[31m          (aliased_type[0m
+[32m          (as_aliasing_type[0m
+            (polyvar_type
+              (polyvar_declaration
+                (polyvar_identifier))
+              (polyvar_declaration
+                (polyvar_identifier))
+              (polyvar_declaration
+                (polyvar_identifier)))
+[31m            (type_constructor))))[0m
+[32m            (type_identifier))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (type_parameters
+[31m            (type_constructor))[0m
+[32m            (type_identifier))[0m
+          (polyvar_type
+            (polyvar_declaration
+              (generic_type
+[31m                (type_constructor_path
+                  (module_path
+                    (module_name))
+                  (type_constructor))[0m
+[32m                (type_identifier_path
+                  (module_identifier)
+                  (type_identifier))[0m
+                (type_arguments
+[31m                  (type_constructor_path
+                    (type_constructor)))))))))[0m
+[32m                  (type_identifier))))))))[0m
+
+
+  93. Function:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (function_type
+            (function_type_parameters
+[31m              (type_constructor_path
+                (type_constructor)))
+            (type_constructor_path
+              (type_constructor)))))[0m
+[32m              (type_identifier))
+            (type_identifier))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (function_type
+            (function_type_parameters
+              (parameter
+[31m                (type_constructor_path
+                  (type_constructor))))
+            (type_constructor_path
+              (type_constructor)))))[0m
+[32m                (type_identifier)))
+            (type_identifier))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (function_type
+            (function_type_parameters
+              (parameter
+[31m                (type_constructor_path
+                  (type_constructor)))[0m
+[32m                (type_identifier))[0m
+              (parameter
+[31m                (type_constructor_path
+                  (type_constructor))))
+            (type_constructor_path
+              (type_constructor)))))[0m
+[32m                (type_identifier)))
+            (type_identifier))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (function_type
+            (function_type_parameters
+              (parameter
+                (labeled_parameter
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (type_annotation
+[31m                    (type_constructor_path
+                      (type_constructor)))))[0m
+[32m                    (type_identifier))))[0m
+              (parameter
+                (labeled_parameter
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (type_annotation
+[31m                    (type_constructor_path
+                      (type_constructor)))))[0m
+[32m                    (type_identifier))))[0m
+              (parameter
+                (unit_type)))
+[31m            (type_constructor_path
+              (type_constructor))))))[0m
+[32m            (type_identifier)))))[0m
+
+
+  94. Object:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (object_type)))
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (object_type)))
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (object_type
+            (field
+              (property_identifier
+                (string_fragment))
+[31m              (type_constructor_path
+                (type_constructor))))))[0m
+[32m              (type_identifier)))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (object_type
+            (field
+              (property_identifier
+                (string_fragment))
+[31m              (type_constructor_path
+                (type_constructor)))[0m
+[32m              (type_identifier))[0m
+            (field
+              (property_identifier
+                (string_fragment))
+[31m              (type_constructor_path
+                (type_constructor)))[0m
+[32m              (type_identifier))[0m
+            (field
+[31m              (type_constructor_path
+                (type_constructor))))))[0m
+[32m              (type_identifier)))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (type_parameters
+[31m            (type_constructor))
+          (aliased_type[0m
+[32m            (type_identifier))
+          (as_aliasing_type[0m
+            (object_type
+              (field
+                (property_identifier
+                  (string_fragment))
+[31m                (type_constructor_path
+                  (type_constructor))))
+            (type_constructor)))))[0m
+[32m                (type_identifier)))
+            (type_identifier)))))[0m
+
+
+  95. Generic:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (type_parameters
+[31m            (type_constructor)
+            (type_constructor))[0m
+[32m            (type_identifier)
+            (type_identifier))[0m
+          (tuple_type
+            (generic_type
+[31m              (type_constructor_path
+                (type_constructor))[0m
+[32m              (type_identifier)[0m
+              (type_arguments
+[31m                (type_constructor_path
+                  (type_constructor))))[0m
+[32m                (type_identifier)))[0m
+            (generic_type
+[31m              (type_constructor_path
+                (type_constructor))[0m
+[32m              (type_identifier)[0m
+              (type_arguments
+[31m                (type_constructor_path
+                  (type_constructor)))))))[0m
+[32m                (type_identifier))))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (generic_type
+[31m            (type_constructor_path
+              (type_constructor))[0m
+[32m            (type_identifier)[0m
+            (type_arguments
+              (unit)
+[31m              (type_constructor_path
+                (type_constructor))))))[0m
+[32m              (type_identifier)))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (type_parameters
+[31m            (type_constructor))
+          (aliased_type[0m
+[32m            (type_identifier))
+          (as_aliasing_type[0m
+            (generic_type
+[31m              (type_constructor_path
+                (type_constructor))[0m
+[32m              (type_identifier)[0m
+              (type_arguments
+[31m                (type_constructor_path
+                  (type_constructor))))
+            (type_constructor)))))[0m
+[32m                (type_identifier)))
+            (type_identifier)))))[0m
+
+
+  96. Recursive:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))
+          (type_constructor_path
+            (type_constructor)))))[0m
+[32m          (type_identifier)
+          (type_identifier))))[0m
+
+
+  97. Decorated:
+
+    (source_file
+      (decorator
+        (decorator_identifier)
+        (decorator_arguments
+[31m          (value_name)))[0m
+[32m          (value_identifier)))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (record_type
+            (record_type_field
+              (property_identifier)
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor)))))))[0m
+[32m                (type_identifier))))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (object_type
+            (decorator
+              (decorator_identifier))
+            (field
+              (property_identifier
+                (string_fragment))
+              (function_type
+                (function_type_parameters
+                  (parameter
+[31m                    (type_constructor_path
+                      (type_constructor)))[0m
+[32m                    (type_identifier))[0m
+                  (parameter
+[31m                    (type_constructor_path
+                      (type_constructor))))[0m
+[32m                    (type_identifier)))[0m
+                (unit_type)))))))
+
+
+  98. Mutually Recursive:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (record_type
+            (record_type_field
+              (property_identifier)
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor))))))[0m
+[32m                (type_identifier)))))[0m
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (record_type
+            (record_type_field
+              (property_identifier)
+              (type_annotation
+                (generic_type
+[31m                  (type_constructor_path
+                    (type_constructor))[0m
+[32m                  (type_identifier)[0m
+                  (type_arguments
+[31m                    (type_constructor_path
+                      (type_constructor))))))))))[0m
+[32m                    (type_identifier)))))))))[0m
+
+
+  99. Labled function with uncurried:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (function_type
+            (function_type_parameters
+              (parameter
+                (uncurry)
+                (labeled_parameter
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (type_annotation
+[31m                    (type_constructor_path
+                      (type_constructor))))))[0m
+[32m                    (type_identifier)))))[0m
+            (unit_type)))))
+
+
+  100. Polymorphic type:
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (type_annotation
+            (polymorphic_type
+[31m              (type_constructor)[0m
+[32m              (type_identifier)[0m
+              (function_type
+                (function_type_parameters
+[31m                  (type_constructor_path
+                    (type_constructor)))
+                (type_constructor_path
+                  (type_constructor)))))[0m
+[32m                  (type_identifier))
+                (type_identifier))))[0m
+          (function
+[31m            (value_name)
+            (value_name))))[0m
+[32m            (value_identifier)
+            (value_identifier))))[0m
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (type_annotation
+            (polymorphic_type
+              (abstract_type
+[31m                (type_constructor))[0m
+[32m                (type_identifier))[0m
+              (function_type
+                (function_type_parameters
+                  (parameter
+                    (generic_type
+[31m                      (type_constructor_path
+                        (type_constructor))[0m
+[32m                      (type_identifier)[0m
+                      (type_arguments
+[31m                        (type_constructor_path
+                          (type_constructor)))))[0m
+[32m                        (type_identifier))))[0m
+                  (parameter
+                    (generic_type
+[31m                      (type_constructor_path
+                        (type_constructor))[0m
+[32m                      (type_identifier)[0m
+                      (type_arguments
+[31m                        (type_constructor_path
+                          (type_constructor))))))
+                (type_constructor_path
+                  (type_constructor))))))))[0m
+[32m                        (type_identifier)))))
+                (type_identifier)))))))[0m
+
+
+  101. Variance annotations:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (type_parameters
+[31m            (type_constructor))))[0m
+[32m            (type_identifier))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (type_parameters
+[31m            (type_constructor)))))[0m
+[32m            (type_identifier)))))[0m
+
+
+  102. Type constraint:
+
+    (source_file
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (type_parameters
+[31m            (type_constructor))
+          (type_constructor_path
+            (type_constructor))[0m
+[32m            (type_identifier))
+          (type_identifier)[0m
+          (type_constraint
+[31m            (type_constructor_path
+              (type_constructor))
+            (type_constructor_path
+              (type_constructor)))))[0m
+[32m            (type_identifier)
+            (type_identifier))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (type_parameters
+[31m            (type_constructor)
+            (type_constructor))[0m
+[32m            (type_identifier)
+            (type_identifier))[0m
+          (function_type
+            (function_type_parameters
+[31m              (type_constructor_path
+                (type_constructor)))
+            (type_constructor_path
+              (type_constructor)))[0m
+[32m              (type_identifier))
+            (type_identifier))[0m
+          (type_constraint
+[31m            (type_constructor_path
+              (type_constructor))
+            (type_constructor_path
+              (type_constructor)))[0m
+[32m            (type_identifier)
+            (type_identifier))[0m
+          (type_constraint
+[31m            (type_constructor_path
+              (type_constructor))[0m
+[32m            (type_identifier)[0m
+            (function_type
+              (function_type_parameters
+[31m                (type_constructor_path
+                  (type_constructor)))
+              (type_constructor_path
+                (type_constructor))))))[0m
+[32m                (type_identifier))
+              (type_identifier)))))[0m
+      (type_declaration
+        (type_binding
+[31m          (type_constructor_path
+            (type_constructor))[0m
+[32m          (type_identifier)[0m
+          (type_parameters
+[31m            (type_constructor))[0m
+[32m            (type_identifier))[0m
+          (type_constraint
+[31m            (type_constructor_path
+              (type_constructor))
+            (type_constructor_path
+              (type_constructor))))))[0m
+[32m            (type_identifier)
+            (type_identifier)))))[0m
+
+
+  103. Simple parameters:
+
+    (source_file
+      (expression_statement
+        (function
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (number)))
+      (expression_statement
+        (function
+          (formal_parameters)
+          (number)))
+      (expression_statement
+        (function
+          (formal_parameters
+            (parameter
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (parameter
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (number)))
+      (expression_statement
+        (function
+          (formal_parameters
+            (parameter
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (parameter
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (block
+            (expression_statement
+[31m              (value_name)))))[0m
+[32m              (value_identifier)))))[0m
+      (expression_statement
+        (function
+          (formal_parameters
+            (parameter
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (number)))
+      (expression_statement
+        (function
+          (formal_parameters
+            (parameter
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (parameter
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (number)))
+      (expression_statement
+        (function
+          (formal_parameters
+            (parameter
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (parameter
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (number)))
+      (expression_statement
+        (function
+          (formal_parameters
+            (parameter
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (parameter
+              (uncurry)
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (parameter
+[31m              (value_name))[0m
+[32m              (value_identifier))[0m
+            (parameter
+              (uncurry)
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (number)))
+      (expression_statement
+        (function
+          (formal_parameters
+            (parameter
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (number))))
+
+
+  104. Type annotations:
+
+    (source_file
+      (expression_statement
+        (function
+          parameters: (formal_parameters
+            (parameter
+[31m              (value_name)[0m
+[32m              (value_identifier)[0m
+              (type_annotation
+[31m                (type_constructor_path
+                  (type_constructor))))[0m
+[32m                (type_identifier)))[0m
+            (parameter
+              (labeled_parameter
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (type_annotation
+[31m                  (type_constructor_path
+                    (type_constructor))))))[0m
+[32m                  (type_identifier)))))[0m
+          return_type: (type_annotation
+[31m            (type_constructor_path
+              (type_constructor)))[0m
+[32m            (type_identifier))[0m
+          body: (number)))
+      (expression_statement
+        (function
+          parameters: (formal_parameters
+            (parameter
+              (record_pattern
+[31m                (value_path
+                  (value_name))[0m
+[32m                (value_identifier)[0m
+                (parenthesized_pattern
+[31m                  (value_name)[0m
+[32m                  (value_identifier)[0m
+                  (type_annotation
+[31m                    (type_constructor_path
+                      (type_constructor))))))[0m
+[32m                    (type_identifier)))))[0m
+            (parameter
+              (record_pattern
+[31m                (value_path
+                  (value_name))
+                (value_name))))[0m
+[32m                (value_identifier)
+                (value_identifier))))[0m
+          body: (binary_expression
+[31m            left: (value_name)
+            right: (value_name)))))[0m
+[32m            left: (value_identifier)
+            right: (value_identifier)))))[0m
+
+
+  105. Abstract type:
+
+    (source_file
+      (let_declaration
+        (let_binding
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (function
+            (formal_parameters
+              (parameter
+                (abstract_type
+[31m                  (type_constructor)))[0m
+[32m                  (type_identifier)))[0m
+              (parameter
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (type_annotation
+[31m                  (type_constructor_path
+                    (type_constructor)))))[0m
+[32m                  (type_identifier))))[0m
+            (type_annotation
+[31m              (type_constructor_path
+                (type_constructor)))
+            (value_name)))))[0m
+[32m              (type_identifier))
+            (value_identifier)))))[0m
+
+
+  106. Parameter defaults:
+
+    (source_file
+      (expression_statement
+        (function
+          parameters: (formal_parameters
+            (parameter
+              (labeled_parameter
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (type_annotation
+[31m                  (type_constructor_path
+                    (type_constructor)))[0m
+[32m                  (type_identifier))[0m
+                default_value: (number)))
+            (parameter
+              (labeled_parameter
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                default_value: (number)))
+            (parameter
+              (labeled_parameter
+[31m                (value_name)[0m
+[32m                (value_identifier)[0m
+                (type_annotation
+[31m                  (type_constructor_path
+                    (type_constructor)))))[0m
+[32m                  (type_identifier))))[0m
+            (parameter
+              (labeled_parameter
+[31m                (value_name)))[0m
+[32m                (value_identifier)))[0m
+            (parameter
+              (unit)))
+          body: (number))))
+
+
+  107. Parameter aliasing:
+
+    (source_file
+      (expression_statement
+        (function
+          (formal_parameters
+            (parameter
+              (labeled_parameter
+[31m                (alias_pattern
+                  (value_name)
+                  (value_name))[0m
+[32m                (value_identifier)
+                (as_aliasing
+                  (value_identifier))[0m
+                (type_annotation
+[31m                  (type_constructor_path
+                    (type_constructor)))[0m
+[32m                  (type_identifier))[0m
+                (number))))
+          (number)))
+      (expression_statement
+        (function
+          (formal_parameters
+            (parameter
+              (labeled_parameter
+[31m                (alias_pattern
+                  (value_name)[0m
+[32m                (value_identifier)
+                (as_aliasing[0m
+                  (tuple_pattern
+                    (tuple_item_pattern
+[31m                      (value_name))[0m
+[32m                      (value_identifier))[0m
+                    (tuple_item_pattern
+[31m                      (value_name)))))))
+          (value_name))))[0m
+[32m                      (value_identifier)))))))
+          (value_identifier))))[0m
+
+
+  108. Record pattern:
+
+    (source_file
+      (expression_statement
+        (function
+          (formal_parameters
+            (parameter
+              (record_pattern
+[31m                (value_path
+                  (value_name))
+                (value_path
+                  (value_name))[0m
+[32m                (value_identifier)
+                (value_identifier)[0m
+                (record_pattern
+[31m                  (value_path
+                    (value_name))
+                  (value_path
+                    (value_name)))
+                (value_path
+                  (value_name))
+                (value_name))))[0m
+[32m                  (value_identifier)
+                  (value_identifier))
+                (value_identifier)
+                (value_identifier))))[0m
+          (number))))
+
+
+  109. Ref assignment as body:
+
+    (source_file
+      (expression_statement
+        (function
+[31m          (value_name)[0m
+[32m          (value_identifier)[0m
+          (mutation_expression
+[31m            (value_name)
+            (call_expression
+              (constructor_path
+                (constructor_name))[0m
+[32m            (value_identifier)
+            (variant
+              (variant_identifier)[0m
+              (arguments
+[31m                (value_name)))))))[0m
+[32m                (value_identifier)))))))[0m
+
+
+  110. Operator precendence:
+
+    (source_file
+      (expression_statement
+        (function
+          (formal_parameters
+            (parameter
+[31m              (value_name)))[0m
+[32m              (value_identifier)))[0m
+          (binary_expression
+            (pipe_expression
+[31m              (value_name)
+              (value_path
+                (module_path
+                  (module_name))
+                (value_name)))[0m
+[32m              (value_identifier)
+              (value_identifier_path
+                (module_identifier)
+                (value_identifier)))[0m
+            (number)))))
+
+
+  111. Async:
+
+    (source_file
+      (expression_statement
+        (function
+          (formal_parameters)
+[31m          (value_name))))[0m
+[32m          (value_identifier))))[0m
+
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

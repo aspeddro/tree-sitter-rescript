@@ -175,11 +175,6 @@ module.exports = grammar({
       sep1('and', $.module_binding)
     ),
 
-    _module_structure: $ => seq(
-      $._module_definition,
-      optional($.module_type_annotation),
-    ),
-
     _module_definition: $ => choice(
       $.block,
       $.module_expression,
@@ -194,12 +189,12 @@ module.exports = grammar({
       )
     ),
 
-    functor: $ => seq(
+    functor: $ => prec.right(seq(
       field('parameters', $.functor_parameters),
       optional(field('return_module_type', $.module_type_annotation)),
       '=>',
-      field('body', $._module_definition),
-    ),
+      field('body', choice($._module_type, $.block)),
+    )),
 
     functor_parameters: $ => parenthesize(
       optional(commaSep1t($.functor_parameter)),
@@ -207,7 +202,7 @@ module.exports = grammar({
 
     functor_parameter: $ => seq(
       $.module_path,
-      $.module_type_annotation,
+      optional($.module_type_annotation)
     ),
 
     module_type_annotation: $ => seq(
@@ -1102,7 +1097,6 @@ module.exports = grammar({
     polyvar: $ => prec.right(seq(
       $.polyvar_identifier,
       optional($.call_arguments)
-      // optional(alias($.variant_arguments, $.arguments)),
     )),
 
     _type_constructor: $ => choice(
@@ -1160,7 +1154,7 @@ module.exports = grammar({
     module_type_constraint: $ => prec.right(seq(
       $._module_type,
       'with',
-      sep1('and', choice($.constrain_type, $.constrain_module, /* $.constrain_module_type */))
+      sep1('and', choice($.constrain_type, $.constrain_module))
     )),
 
     constrain_module: $ => seq(

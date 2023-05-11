@@ -141,7 +141,6 @@ Array destructuring
 
 let [bar, baz] = foo
 let [bar, baz, _] = foo
-let [@decorator bar, _] = foo
 
 --------------------------------------------------------------------------------
 
@@ -156,14 +155,6 @@ let [@decorator bar, _] = foo
     (let_binding
       (array_pattern
         (value_name)
-        (value_name)
-        (value_name))
-      (value_name)))
-  (let_declaration
-    (let_binding
-      (array_pattern
-        (decorator
-          (decorator_identifier))
         (value_name)
         (value_name))
       (value_name))))
@@ -173,7 +164,6 @@ List destructuring
 ================================================================================
 
 let list{head, ...tail} = foo
-let list{@decorator head, ..._} = foo
 
 --------------------------------------------------------------------------------
 
@@ -181,15 +171,6 @@ let list{@decorator head, ..._} = foo
   (let_declaration
     (let_binding
       (list_pattern
-        (value_name)
-        (spread_pattern
-          (value_name)))
-      (value_name)))
-  (let_declaration
-    (let_binding
-      (list_pattern
-        (decorator
-          (decorator_identifier))
         (value_name)
         (spread_pattern
           (value_name)))

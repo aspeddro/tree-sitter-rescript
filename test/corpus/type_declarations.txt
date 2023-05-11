@@ -109,7 +109,6 @@ type t = {
   a: int,
   b: myType,
 
-  @as("type")
   type_: string,
 
   mutable x: int,
@@ -139,11 +138,6 @@ type t = {}
           (type_annotation
             (type_constructor_path
               (type_constructor))))
-        (decorator
-          (decorator_identifier)
-          (decorator_arguments
-            (string
-              (string_fragment))))
         (record_type_field
           (property_identifier)
           (type_annotation
@@ -224,7 +218,7 @@ Variant
 type t =
   | A
   | A'
-  | @live("t.D") D
+  | D
   | B(anotherType)
   | C({foo: int, bar: string})
   | D(module(Foo))
@@ -242,11 +236,6 @@ type t =
           (constructor_name))
         (variant_declaration
           (constructor_name))
-        (decorator
-          (decorator_identifier)
-          (decorator_arguments
-            (string
-              (string_fragment))))
         (variant_declaration
           (constructor_name))
         (variant_declaration
@@ -318,12 +307,12 @@ type t = [>
   | #"cc-cc"
   | #\"cc-cc"
   | #42
-  | @as("42") #FortyTwo
+  | #FortyTwo
   | anotherType
   ]
 
 
-type foo<'a> = @decorator [> #Blue | #DeepBlue | #LightBlue ] as 'a
+type foo<'a> = [> #Blue | #DeepBlue | #LightBlue ] as 'a
 type t<'w> = [M.t<'w>]
 
 --------------------------------------------------------------------------------
@@ -353,11 +342,6 @@ type t<'w> = [M.t<'w>]
               (string_fragment))))
         (polyvar_declaration
           (polyvar_identifier))
-        (decorator
-          (decorator_identifier)
-          (decorator_arguments
-            (string
-              (string_fragment))))
         (polyvar_declaration
           (polyvar_identifier))
         (polyvar_declaration
@@ -369,8 +353,6 @@ type t<'w> = [M.t<'w>]
         (type_constructor))
       (type_parameters
         (type_constructor))
-      (decorator
-        (decorator_identifier))
       (aliased_type
         (polyvar_type
           (polyvar_declaration

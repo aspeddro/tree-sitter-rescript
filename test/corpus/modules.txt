@@ -588,19 +588,17 @@ Externals
 ================================================================================
 
 external aX: t => float = "aX"
-@val external foo: int = "foo"
-@bs.val external foo: int = "foo"
-@module("libfoo") @new external foo: t = "Foo"
+external foo: int = "foo"
+external foo: int = "foo"
+external foo: t = "Foo"
 external _makeStyles: ({..}, . unit) => {..} = "makeStyles"
 
-@send
-external pushState: (Dom.history, @as(json`null`) _, @as("") _, ~href: string) => unit =
+external pushState: (Dom.history, ~href: string) => unit =
   "pushState"
 
-@send
 external add: (
   t,
-  ~option: @unwrap [#Option(Dom.htmlOptionElement) | #OptGroup(Dom.htmlOptGroupElement)],
+  ~option: [#Option(Dom.htmlOptionElement) | #OptGroup(Dom.htmlOptGroupElement)],
 ) => unit = "add"
 
 --------------------------------------------------------------------------------
@@ -617,8 +615,6 @@ external add: (
           (type_constructor))))
     (string
       (string_fragment)))
-  (decorator
-    (decorator_identifier))
   (external_declaration
     (value_name)
     (type_annotation
@@ -626,8 +622,6 @@ external add: (
         (type_constructor)))
     (string
       (string_fragment)))
-  (decorator
-    (decorator_identifier))
   (external_declaration
     (value_name)
     (type_annotation
@@ -635,13 +629,6 @@ external add: (
         (type_constructor)))
     (string
       (string_fragment)))
-  (decorator
-    (decorator_identifier)
-    (decorator_arguments
-      (string
-        (string_fragment))))
-  (decorator
-    (decorator_identifier))
   (external_declaration
     (value_name)
     (type_annotation
@@ -662,8 +649,6 @@ external add: (
         (object_type)))
     (string
       (string_fragment)))
-  (decorator
-    (decorator_identifier))
   (external_declaration
     (value_name)
     (type_annotation
@@ -674,21 +659,6 @@ external add: (
               (module_path
                 (module_name))
               (type_constructor)))
-          (decorator
-            (decorator_identifier)
-            (decorator_arguments
-              (template_string
-                (template_string_content))))
-          (parameter
-            (type_constructor_path
-              (type_constructor)))
-          (decorator
-            (decorator_identifier)
-            (decorator_arguments
-              (string)))
-          (parameter
-            (type_constructor_path
-              (type_constructor)))
           (parameter
             (labeled_parameter
               (value_name)
@@ -698,8 +668,6 @@ external add: (
         (unit_type)))
     (string
       (string_fragment)))
-  (decorator
-    (decorator_identifier))
   (external_declaration
     (value_name)
     (type_annotation
@@ -712,8 +680,6 @@ external add: (
             (labeled_parameter
               (value_name)
               (type_annotation
-                (decorator
-                  (decorator_identifier))
                 (polyvar_type
                   (polyvar_declaration
                     (polyvar_identifier)

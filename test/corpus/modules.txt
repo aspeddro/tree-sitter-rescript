@@ -377,6 +377,10 @@ module MyFunctor = (X: {type t}, Y: {type t}): {type tx; type ty} => {
   type ty = Y.t
 }
 
+module F2: (S1, S1) => T = (X: S, Y: S) => {
+  let cow = x => Y.foo(X.foo(x))
+}
+
 --------------------------------------------------------------------------------
 
 (source_file
@@ -429,7 +433,56 @@ module MyFunctor = (X: {type t}, Y: {type t}): {type tx; type ty} => {
               (type_constructor_path
                 (module_path
                   (module_name))
-                (type_constructor)))))))))
+                (type_constructor))))))))
+  (module_declaration
+    (module_binding
+      name: (module_name)
+      signature: (functor
+        parameters: (functor_parameters
+          (functor_parameter
+            (module_path
+              (module_name)))
+          (functor_parameter
+            (module_path
+              (module_name))))
+        body: (module_type_path
+          (module_type_name
+            (module_name))))
+      definition: (functor
+        parameters: (functor_parameters
+          (functor_parameter
+            (module_path
+              (module_name))
+            (module_type_annotation
+              (module_type_path
+                (module_type_name
+                  (module_name)))))
+          (functor_parameter
+            (module_path
+              (module_name))
+            (module_type_annotation
+              (module_type_path
+                (module_type_name
+                  (module_name))))))
+        body: (block
+          (let_declaration
+            (let_binding
+              pattern: (value_name)
+              body: (function
+                parameter: (value_name)
+                body: (call_expression
+                  function: (value_path
+                    (module_path
+                      (module_name))
+                    (value_name))
+                  arguments: (arguments
+                    (call_expression
+                      function: (value_path
+                        (module_path
+                          (module_name))
+                        (value_name))
+                      arguments: (arguments
+                        (value_name)))))))))))))
 
 ================================================================================
 Functor signature

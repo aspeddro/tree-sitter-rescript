@@ -65,6 +65,7 @@ module.exports = grammar({
     [$.lazy_pattern, $.exception_pattern, $.or_pattern],
     [$.exception_pattern, $.alias_pattern],
     [$.lazy_pattern, $.alias_pattern],
+    [$.alias_pattern, $.or_pattern],
     [$.primary_expression, $.constructor_pattern],
     [$.module_name, $.constructor_name],
     [$.module_binding, $._module_type]
@@ -99,6 +100,8 @@ module.exports = grammar({
     [$._reserved_identifier, $.function],
     [$.type_binding, $._inline_type],
     [$.call_arguments, $.unit],
+    [$._pattern_arguments, $.call_arguments],
+    [$._pattern]
   ],
 
   rules: {
@@ -722,13 +725,8 @@ module.exports = grammar({
       ),
     ),
 
-    _alias_labeled_parameter: $ => seq('~', $.value_name, 'as', $._pattern),
-
     labeled_parameter: $ => seq(
-      choice(
-        seq('~', $.value_name),
-        alias($._alias_labeled_parameter, $.alias_pattern)
-      ),
+      seq('~', $._pattern),
       optional($.type_annotation),
       optional(field('default_value', $._labeled_parameter_default_value)),
     ),
@@ -750,7 +748,7 @@ module.exports = grammar({
     // unfinished constructs are generally treated as literal expressions,
     // not patterns.
     _pattern: $ => prec.dynamic(-1, choice(
-      $.value_name,
+      seq($.value_name, optional($.type_annotation)),
       $._literal_pattern,
       $._destructuring_pattern,
       $.polyvar_type_pattern,
@@ -761,16 +759,16 @@ module.exports = grammar({
       $.or_pattern,
       $.range_pattern,
       $.exception_pattern,
-      $.alias_pattern
+      $.alias_pattern,
     )),
 
-    alias_pattern: $ => seq(
+    alias_pattern: $ => prec.left(seq(
       $._pattern,
       'as',
-      $.value_name
-    ),
+      $._pattern,
+    )),
 
-    parenthesized_pattern: $ => parenthesize(seq($._pattern, optional($.type_annotation))),
+    parenthesized_pattern: $ => parenthesize($._pattern),
 
     range_pattern: $ => seq(
       $._literal_pattern,
@@ -805,15 +803,17 @@ module.exports = grammar({
       $.false,
     ),
 
+    _pattern_arguments: $ => parenthesize(commaSept($._pattern)),
+
     constructor_pattern: $ => prec.right(seq(
       optional('?'),
       $.constructor_path,
-      optional($._pattern)
+      optional(alias($._pattern_arguments, $.arguments))
     )),
 
     polyvar_pattern: $ => prec.right(seq(
       $.polyvar_identifier,
-      optional($._pattern)
+      optional(alias($._pattern_arguments, $.arguments))
     )),
 
     record_pattern: $ => seq(
@@ -1096,7 +1096,7 @@ module.exports = grammar({
 
     polyvar: $ => prec.right(seq(
       $.polyvar_identifier,
-      optional($.call_arguments)
+      optional(alias($.call_arguments, $.arguments))
     )),
 
     _type_constructor: $ => choice(

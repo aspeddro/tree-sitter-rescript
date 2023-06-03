@@ -215,10 +215,10 @@ Parameter aliasing
           (labeled_parameter
             (alias_pattern
               (value_name)
-              (value_name))
-            (type_annotation
-              (type_constructor_path
-                (type_constructor)))
+              (value_name)
+              (type_annotation
+                (type_constructor_path
+                  (type_constructor))))
             (number))))
       (number)))
   (expression_statement

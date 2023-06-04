@@ -372,23 +372,19 @@ Polyvars
 
 (source_file
   (expression_statement
-    (polyvar
-      (polyvar_identifier)))
+    (polyvar))
   (expression_statement
-    (polyvar
-      (polyvar_identifier)
+    (call_expression
+      (polyvar)
       (arguments
         (number))))
   (expression_statement
     (polyvar
-      (polyvar_identifier
-        (polyvar_string
-          (string_fragment)))))
+      (polyvar_string
+        (string_fragment))))
   (expression_statement
     (polyvar
-      (polyvar_identifier
-        (polyvar_string
-          (string_fragment)))))
+      (polyvar_string
+        (string_fragment))))
   (expression_statement
-    (polyvar
-      (polyvar_identifier))))
+    (polyvar)))

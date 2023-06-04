@@ -134,8 +134,7 @@ Attribute values
         (number))
       (jsx_attribute
         (property_identifier)
-        (polyvar
-          (polyvar_identifier)))
+        (polyvar))
       (jsx_attribute
         (property_identifier)
         (constructor_path

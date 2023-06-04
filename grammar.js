@@ -80,6 +80,7 @@ module.exports = grammar({
     [$.primary_expression, $.value_path],
     [$.primary_expression, $._pattern, $.value_path],
     [$.primary_expression, $._jsx_child],
+    [$.primary_expression, $.polyvar_pattern],
     [$.tuple_type, $.function_type_parameter],
     [$.list, $.list_pattern],
     [$.array, $.array_pattern],
@@ -332,14 +333,12 @@ module.exports = grammar({
     polyvar_declaration: $ => prec.right(
       choice(
         seq(
-          $.polyvar_identifier,
-          optional($.polyvar_parameters),
+          $.polyvar,
+          optional(parenthesize(commaSep1t($._type))),
         ),
         $._inline_type
       )
     ),
-
-    polyvar_parameters: $ => parenthesize(commaSep1t($._type)),
 
     record_type: $ => seq(
       '{',
@@ -809,7 +808,7 @@ module.exports = grammar({
     )),
 
     polyvar_pattern: $ => prec.right(seq(
-      $.polyvar_identifier,
+      $.polyvar,
       optional(alias($._pattern_arguments, $.arguments))
     )),
 
@@ -1090,12 +1089,6 @@ module.exports = grammar({
       optional($._newline),
     )),
 
-
-    polyvar: $ => prec.right(seq(
-      $.polyvar_identifier,
-      optional(alias($.call_arguments, $.arguments))
-    )),
-
     _type_constructor: $ => choice(
       $.type_constructor_path,
       ".."
@@ -1182,7 +1175,7 @@ module.exports = grammar({
       $.block,
     ),
 
-    polyvar_identifier: $ => seq(
+    polyvar: $ => seq(
       '#',
       choice(
         /[a-zA-Z0-9_']+/,

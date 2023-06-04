@@ -269,8 +269,7 @@ foo->{
   (expression_statement
     (pipe_expression
       (value_name)
-      (polyvar
-        (polyvar_identifier))))
+      (polyvar)))
   (expression_statement
     (pipe_expression
       (value_name)
@@ -623,14 +622,14 @@ switch foo {
       (value_name)
       (switch_match
         (polyvar_pattern
-          (polyvar_identifier))
+          (polyvar))
         (sequence_expression
           (expression_statement
             (number))))
       (switch_match
         (alias_pattern
           (polyvar_pattern
-            (polyvar_identifier)
+            (polyvar)
             (arguments
               (alias_pattern
                 (value_name)

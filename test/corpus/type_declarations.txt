@@ -319,26 +319,25 @@ type t<'w> = [M.t<'w>]
         (type_constructor))
       (polyvar_type
         (polyvar_declaration
-          (polyvar_identifier))
+          (polyvar))
         (polyvar_declaration
-          (polyvar_identifier))
+          (polyvar))
         (polyvar_declaration
-          (polyvar_identifier)
-          (polyvar_parameters
-            (type_constructor_path
-              (type_constructor))))
+          (polyvar)
+          (type_constructor_path
+            (type_constructor)))
         (polyvar_declaration
-          (polyvar_identifier
+          (polyvar
             (polyvar_string
               (string_fragment))))
         (polyvar_declaration
-          (polyvar_identifier
+          (polyvar
             (polyvar_string
               (string_fragment))))
         (polyvar_declaration
-          (polyvar_identifier))
+          (polyvar))
         (polyvar_declaration
-          (polyvar_identifier))
+          (polyvar))
         (polyvar_declaration
           (type_constructor_path
             (type_constructor))))))
@@ -351,11 +350,11 @@ type t<'w> = [M.t<'w>]
       (aliased_type
         (polyvar_type
           (polyvar_declaration
-            (polyvar_identifier))
+            (polyvar))
           (polyvar_declaration
-            (polyvar_identifier))
+            (polyvar))
           (polyvar_declaration
-            (polyvar_identifier)))
+            (polyvar)))
         (type_constructor))))
   (type_declaration
     (type_binding

@@ -197,7 +197,7 @@ type M.t +=
       (type_constructor_path
         (type_constructor))
       (variant_type
-        (variant_declaration
+        (constructor_declaration
           (constructor_name)))))
   (type_declaration
     (type_binding
@@ -206,9 +206,9 @@ type M.t +=
           (module_name))
         (type_constructor))
       (variant_type
-        (variant_declaration
+        (constructor_declaration
           (constructor_name))
-        (variant_declaration
+        (constructor_declaration
           (constructor_name))))))
 
 ================================================================================
@@ -232,46 +232,42 @@ type t =
       (type_constructor_path
         (type_constructor))
       (variant_type
-        (variant_declaration
+        (constructor_declaration
           (constructor_name))
-        (variant_declaration
+        (constructor_declaration
           (constructor_name))
-        (variant_declaration
+        (constructor_declaration
           (constructor_name))
-        (variant_declaration
+        (constructor_declaration
           (constructor_name)
-          (variant_parameters
-            (type_constructor_path
-              (type_constructor))))
-        (variant_declaration
+          (type_constructor_path
+            (type_constructor)))
+        (constructor_declaration
           (constructor_name)
-          (variant_parameters
-            (record_type
-              (record_type_field
-                (property_identifier)
-                (type_annotation
-                  (type_constructor_path
-                    (type_constructor))))
-              (record_type_field
-                (property_identifier)
-                (type_annotation
-                  (type_constructor_path
-                    (type_constructor)))))))
-        (variant_declaration
+          (record_type
+            (record_type_field
+              (property_identifier)
+              (type_annotation
+                (type_constructor_path
+                  (type_constructor))))
+            (record_type_field
+              (property_identifier)
+              (type_annotation
+                (type_constructor_path
+                  (type_constructor))))))
+        (constructor_declaration
           (constructor_name)
-          (variant_parameters
-            (package_type
-              (module_type_path
-                (module_type_name
-                  (module_name))))))
-        (variant_declaration
+          (package_type
+            (module_type_path
+              (module_type_name
+                (module_name)))))
+        (constructor_declaration
           (constructor_name)
-          (variant_parameters
-            (package_type
-              (module_type_path
-                (module_path
-                  (module_name))
-                (module_type_name)))))))))
+          (package_type
+            (module_type_path
+              (module_path
+                (module_name))
+              (module_type_name))))))))
 
 ================================================================================
 Annotated variant
@@ -287,11 +283,10 @@ type rec t = Any('a): t
       (type_constructor_path
         (type_constructor))
       (variant_type
-        (variant_declaration
+        (constructor_declaration
           (constructor_name)
-          (variant_parameters
-            (type_constructor_path
-              (type_constructor)))
+          (type_constructor_path
+            (type_constructor))
           (type_annotation
             (type_constructor_path
               (type_constructor))))))))

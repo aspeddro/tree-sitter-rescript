@@ -226,8 +226,7 @@ module.exports = grammar({
 
     exception_declaration: $ => seq(
       'exception',
-      $.constructor_name,
-      optional($.variant_parameters),
+      $.constructor_declaration,
       optional(seq('=', $.constructor_path))
     ),
 
@@ -314,16 +313,14 @@ module.exports = grammar({
 
     variant_type: $ => prec.left(seq(
       optional('|'),
-      barSep1($.variant_declaration),
+      barSep1($.constructor_declaration),
     )),
 
-    variant_declaration: $ => prec.right(seq(
+    constructor_declaration: $ => prec.right(seq(
       $.constructor_name,
-      optional($.variant_parameters),
+      optional(parenthesize(commaSep1t($._type))),
       optional($.type_annotation),
     )),
-
-    variant_parameters: $ => parenthesize(commaSep1t($._type)),
 
     polyvar_type: $ => prec.left(seq(
       choice('[', '[>', '[<',),

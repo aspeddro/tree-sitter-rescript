@@ -764,16 +764,18 @@ exception Invalid = Errors.Invalid
 
 (source_file
   (exception_declaration
-    (constructor_name)
-    (variant_parameters
+    (constructor_declaration
+      (constructor_name)
       (type_constructor_path
         (type_constructor))))
   (exception_declaration
-    (constructor_name)
+    (constructor_declaration
+      (constructor_name))
     (constructor_path
       (constructor_name)))
   (exception_declaration
-    (constructor_name)
+    (constructor_declaration
+      (constructor_name))
     (constructor_path
       (module_path
         (module_name))

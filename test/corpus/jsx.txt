@@ -26,46 +26,54 @@ Simple JSX elements
   (expression_statement
     (jsx_element
       (jsx_opening_element
-        (nested_jsx_identifier
-          (jsx_identifier)
-          (jsx_identifier)))
-      (value_identifier)
+        (jsx_identifier
+          (module_path
+            (module_name))
+          (constructor_name)))
+      (value_path
+        (value_name))
       (jsx_element
         (jsx_opening_element
           (jsx_identifier))
-        (value_identifier)
+        (value_path
+          (value_name))
         (jsx_closing_element
           (jsx_identifier)))
-      (value_identifier)
+      (value_path
+        (value_name))
       (jsx_closing_element
-        (nested_jsx_identifier
-          (jsx_identifier)
-          (jsx_identifier)))))
+        (jsx_identifier
+          (module_path
+            (module_name))
+          (constructor_name)))))
   (expression_statement
     (jsx_element
       (jsx_opening_element
-        (nested_jsx_identifier
-          (nested_jsx_identifier
-            (nested_jsx_identifier
-              (jsx_identifier)
-              (jsx_identifier))
-            (jsx_identifier))
-          (jsx_identifier)))
+        (jsx_identifier
+          (module_path
+            (module_path
+              (module_path
+                (module_name))
+              (module_name))
+            (module_name))
+          (constructor_name)))
       (jsx_closing_element
-        (nested_jsx_identifier
-          (nested_jsx_identifier
-            (nested_jsx_identifier
-              (jsx_identifier)
-              (jsx_identifier))
-            (jsx_identifier))
-          (jsx_identifier)))))
+        (jsx_identifier
+          (module_path
+            (module_path
+              (module_path
+                (module_name))
+              (module_name))
+            (module_name))
+          (constructor_name)))))
   (expression_statement
     (jsx_element
       (jsx_opening_element
         (jsx_identifier))
-      (value_identifier_path
-        (module_identifier)
-        (value_identifier))
+      (value_path
+        (module_path
+          (module_name))
+        (value_name))
       (jsx_closing_element
         (jsx_identifier))))
   (expression_statement
@@ -73,8 +81,9 @@ Simple JSX elements
       (jsx_opening_element
         (jsx_identifier))
       (member_expression
-        (value_identifier)
-        (property_identifier))
+        (value_name)
+        (value_path
+          (value_name)))
       (jsx_closing_element
         (jsx_identifier)))))
 
@@ -118,18 +127,18 @@ Attribute values
 (source_file
   (expression_statement
     (jsx_self_closing_element
-      (jsx_identifier)
+      (jsx_identifier
+        (constructor_name))
       (jsx_attribute
         (property_identifier)
         (number))
       (jsx_attribute
         (property_identifier)
-        (polyvar
-          (polyvar_identifier)))
+        (polyvar))
       (jsx_attribute
         (property_identifier)
-        (variant
-          (variant_identifier)))
+        (constructor_path
+          (constructor_name)))
       (jsx_attribute
         (property_identifier))
       (jsx_attribute
@@ -138,15 +147,16 @@ Attribute values
         (property_identifier)
         (jsx_expression
           (expression_statement
-            (value_identifier))))))
+            (value_name))))))
   (expression_statement
     (jsx_self_closing_element
-      (jsx_identifier)
+      (jsx_identifier
+        (constructor_name))
       (jsx_attribute
         (property_identifier)
         (pipe_expression
-          (value_identifier)
-          (value_identifier)))
+          (value_name)
+          (value_name)))
       (jsx_attribute
         (property_identifier)
         (true)))))
@@ -166,10 +176,12 @@ Anonymous JSX element
   (expression_statement
     (jsx_element
       (jsx_opening_element
-        (jsx_identifier))
+        (jsx_identifier
+          (constructor_name)))
       (jsx_fragment)
       (jsx_closing_element
-        (jsx_identifier)))))
+        (jsx_identifier
+          (constructor_name))))))
 
 ================================================================================
 Block children
@@ -192,7 +204,7 @@ Block children
       (block
         (let_declaration
           (let_binding
-            (value_identifier)
+            (value_name)
             (string
               (string_fragment))))
         (expression_statement
@@ -204,9 +216,10 @@ Block children
             (block
               (expression_statement
                 (call_expression
-                  (value_identifier_path
-                    (module_identifier)
-                    (value_identifier))
+                  (value_path
+                    (module_path
+                      (module_name))
+                    (value_name))
                   (arguments
                     (string
                       (string_fragment))))))
@@ -227,11 +240,13 @@ Children spread
   (expression_statement
     (jsx_element
       (jsx_opening_element
-        (jsx_identifier))
+        (jsx_identifier
+          (constructor_name)))
       (spread_element
-        (value_identifier))
+        (value_name))
       (jsx_closing_element
-        (jsx_identifier)))))
+        (jsx_identifier
+          (constructor_name))))))
 
 ================================================================================
 Attribute Block
@@ -255,15 +270,17 @@ Attribute Block
   (expression_statement
     (jsx_element
       (jsx_opening_element
-        (jsx_identifier)
+        (jsx_identifier
+          (constructor_name))
         (jsx_attribute
           (property_identifier)
           (jsx_expression
             (expression_statement
               (call_expression
-                (value_identifier_path
-                  (module_identifier)
-                  (value_identifier))
+                (value_path
+                  (module_path
+                    (module_name))
+                  (value_name))
                 (arguments
                   (string
                     (string_fragment)))))))
@@ -271,19 +288,24 @@ Attribute Block
           (property_identifier)
           (jsx_expression
             (open_statement
-              (module_identifier))
+              (module_path
+                (module_name)))
             (expression_statement
               (record
                 (record_field
-                  (property_identifier)
-                  (value_identifier))
+                  (property_identifier
+                    (value_name))
+                  (value_name))
                 (record_field
-                  (property_identifier)
+                  (property_identifier
+                    (value_name))
                   (false)))))))
       (jsx_self_closing_element
-        (jsx_identifier))
+        (jsx_identifier
+          (constructor_name)))
       (jsx_closing_element
-        (jsx_identifier)))))
+        (jsx_identifier
+          (constructor_name))))))
 
 ================================================================================
 Spread props
@@ -300,13 +322,15 @@ Spread props
       (jsx_identifier)
       (jsx_expression
         (spread_element
-          (value_identifier)))))
+          (value_name)))))
   (expression_statement
     (jsx_element
       (jsx_opening_element
-        (jsx_identifier)
+        (jsx_identifier
+          (constructor_name))
         (jsx_expression
           (spread_element
-            (value_identifier))))
+            (value_name))))
       (jsx_closing_element
-        (jsx_identifier)))))
+        (jsx_identifier
+          (constructor_name))))))

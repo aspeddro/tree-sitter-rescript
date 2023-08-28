@@ -16,36 +16,35 @@ export d = 5
 (source_file
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (number)))
   (let_declaration
     (let_binding
-      (value_identifier)
-      (value_identifier)))
+      (value_name)
+      (value_name)))
   (let_declaration
     (let_binding
-      (value_identifier)
-      (polyvar
-        (polyvar_identifier))))
+      (value_name)
+      (polyvar)))
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (number)))
   (let_declaration
     (let_binding
-      (value_identifier)
-      (value_identifier)))
+      (value_name)
+      (value_name)))
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (number)))
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (number)))
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (number))))
 
 ================================================================================
@@ -63,36 +62,37 @@ let (a, b, ()) = foo
     (let_binding
       (tuple_pattern
         (tuple_item_pattern
-          (value_identifier))
+          (value_name))
         (tuple_item_pattern
-          (value_identifier))
+          (value_name))
         (tuple_item_pattern
           (tuple_pattern
             (tuple_item_pattern
-              (value_identifier))
+              (value_name))
             (tuple_item_pattern
-              (value_identifier)))))
-      (value_identifier)))
+              (value_name)))))
+      (value_name)))
   (let_declaration
     (let_binding
       (tuple_pattern
         (tuple_item_pattern
-          (value_identifier)
+          (value_name)
           (type_annotation
-            (type_identifier)))
+            (type_constructor_path
+              (type_constructor))))
         (tuple_item_pattern
-          (value_identifier)))
-      (value_identifier)))
+          (value_name)))
+      (value_name)))
   (let_declaration
     (let_binding
       (tuple_pattern
         (tuple_item_pattern
-          (value_identifier))
+          (value_name))
         (tuple_item_pattern
-          (value_identifier))
+          (value_name))
         (tuple_item_pattern
           (unit)))
-      (value_identifier))))
+      (value_name))))
 
 ================================================================================
 Record destructuring
@@ -108,26 +108,31 @@ let {Bar.Bar.bar: bar} = foo
   (let_declaration
     (let_binding
       (record_pattern
-        (value_identifier)
-        (value_identifier))
-      (value_identifier)))
+        (value_path
+          (value_name))
+        (value_path
+          (value_name)))
+      (value_name)))
   (let_declaration
     (let_binding
       (record_pattern
-        (value_identifier)
-        (value_identifier)
-        (value_identifier))
-      (value_identifier)))
+        (value_path
+          (value_name))
+        (value_path
+          (value_name))
+        (value_name))
+      (value_name)))
   (let_declaration
     (let_binding
       (record_pattern
-        (value_identifier_path
-          (module_identifier_path
-            (module_identifier)
-            (module_identifier))
-          (value_identifier))
-        (value_identifier))
-      (value_identifier))))
+        (value_path
+          (module_path
+            (module_path
+              (module_name))
+            (module_name))
+          (value_name))
+        (value_name))
+      (value_name))))
 
 ================================================================================
 Array destructuring
@@ -142,16 +147,16 @@ let [bar, baz, _] = foo
   (let_declaration
     (let_binding
       (array_pattern
-        (value_identifier)
-        (value_identifier))
-      (value_identifier)))
+        (value_name)
+        (value_name))
+      (value_name)))
   (let_declaration
     (let_binding
       (array_pattern
-        (value_identifier)
-        (value_identifier)
-        (value_identifier))
-      (value_identifier))))
+        (value_name)
+        (value_name)
+        (value_name))
+      (value_name))))
 
 ================================================================================
 List destructuring
@@ -165,10 +170,10 @@ let list{head, ...tail} = foo
   (let_declaration
     (let_binding
       (list_pattern
-        (value_identifier)
+        (value_name)
         (spread_pattern
-          (value_identifier)))
-      (value_identifier))))
+          (value_name)))
+      (value_name))))
 
 ================================================================================
 Block
@@ -184,7 +189,7 @@ let x = {
 (source_file
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (block
         (expression_statement
           (number))
@@ -203,19 +208,21 @@ let b: 'a => unit = ignore
 (source_file
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (type_annotation
-        (type_identifier))
+        (type_constructor_path
+          (type_constructor)))
       (number)))
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (type_annotation
         (function_type
           (function_type_parameters
-            (type_identifier))
+            (type_constructor_path
+              (type_constructor)))
           (unit_type)))
-      (value_identifier))))
+      (value_name))))
 
 ================================================================================
 Recursive
@@ -228,14 +235,14 @@ let rec foo = n => foo(n-1)
 (source_file
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (function
-        (value_identifier)
+        (value_name)
         (call_expression
-          (value_identifier)
+          (value_name)
           (arguments
             (binary_expression
-              (value_identifier)
+              (value_name)
               (number))))))))
 
 ================================================================================
@@ -250,7 +257,7 @@ let () = noop
   (let_declaration
     (let_binding
       (unit)
-      (value_identifier))))
+      (value_name))))
 
 ================================================================================
 And (Primitives)
@@ -263,10 +270,10 @@ let a = 5 and b = 4
 (source_file
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (number))
     (let_binding
-      (value_identifier)
+      (value_name)
       (number))))
 
 ================================================================================
@@ -280,22 +287,55 @@ let rec a = x => x + b(x) and b = y => y - 1
 (source_file
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (function
-        (value_identifier)
+        (value_name)
         (binary_expression
-          (value_identifier)
+          (value_name)
           (call_expression
-            (value_identifier)
+            (value_name)
             (arguments
-              (value_identifier))))))
+              (value_name))))))
     (let_binding
-      (value_identifier)
+      (value_name)
       (function
-        (value_identifier)
+        (value_name)
         (binary_expression
-          (value_identifier)
+          (value_name)
           (number))))))
+
+================================================================================
+And (decorated)
+================================================================================
+
+@one
+let rec a = b
+@two @three
+and b = c
+
+@four and c = 42
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (decorator
+    (decorator_identifier))
+  (let_declaration
+    (let_binding
+      (value_name)
+      (value_name))
+    (decorator
+      (decorator_identifier))
+    (decorator
+      (decorator_identifier))
+    (let_binding
+      (value_name)
+      (value_name))
+    (decorator
+      (decorator_identifier))
+    (let_binding
+      (value_name)
+      (number))))
 
 ================================================================================
 Labled function with uncurried
@@ -308,13 +348,13 @@ let test = (. ~attr) => ()
 (source_file
   (let_declaration
     (let_binding
-      (value_identifier)
+      (value_name)
       (function
         (formal_parameters
           (parameter
             (uncurry)
             (labeled_parameter
-              (value_identifier))))
+              (value_name))))
         (unit)))))
 
 ================================================================================
@@ -331,19 +371,25 @@ let {baz, _} = module(User.Inner)
   (let_declaration
     (let_binding
       (record_pattern
-        (value_identifier)
-        (value_identifier))
-      (module_pack
-        (module_identifier))))
+        (value_path
+          (value_name))
+        (value_path
+          (value_name)))
+      (package_expression
+        (module_path
+          (module_name)))))
   (let_declaration
     (let_binding
       (record_pattern
-        (value_identifier)
-        (value_identifier))
-      (module_pack
-        (module_identifier_path
-          (module_identifier)
-          (module_identifier))))))
+        (value_path
+          (value_name))
+        (value_path
+          (value_name)))
+      (package_expression
+        (module_path
+          (module_path
+            (module_name))
+          (module_name))))))
 
 ================================================================================
 Packing module
@@ -356,9 +402,10 @@ let foo = module(Bar)
 (source_file
   (let_declaration
     (let_binding
-      (value_identifier)
-      (module_pack
-        (module_identifier)))))
+      (value_name)
+      (package_expression
+        (module_path
+          (module_name))))))
 
 ================================================================================
 Unpacking module
@@ -371,9 +418,9 @@ let module(Bar) = foo
 (source_file
   (let_declaration
     (let_binding
-      (module_pack
-        (module_identifier))
-      (value_identifier))))
+      (package_pattern
+        (module_name))
+      (value_name))))
 
 ================================================================================
 Lazy Values
@@ -387,7 +434,7 @@ let lazy x = lazy(1)
   (let_declaration
     (let_binding
       (lazy_pattern
-        (value_identifier))
+        (value_name))
       (lazy_expression
         (parenthesized_expression
           (number))))))

@@ -9,11 +9,13 @@ open! Foo.Bar
 
 (source_file
   (open_statement
-    (module_identifier))
+    (module_path
+      (module_name)))
   (open_statement
-    (module_identifier_path
-      (module_identifier)
-      (module_identifier))))
+    (module_path
+      (module_path
+        (module_name))
+      (module_name))))
 
 ================================================================================
 Include
@@ -43,80 +45,98 @@ include (
 
 (source_file
   (include_statement
-    (module_identifier))
+    (module_path
+      (module_name)))
   (include_statement
-    (module_identifier_path
-      (module_identifier)
-      (module_identifier)))
+    (module_path
+      (module_path
+        (module_name))
+      (module_name)))
   (include_statement
     (functor_use
-      (module_identifier_path
-        (module_identifier)
-        (module_identifier))
+      (module_path
+        (module_path
+          (module_name))
+        (module_name))
       (arguments
-        (module_identifier))))
+        (module_path
+          (module_name)))))
   (include_statement
     (functor_use
-      (module_identifier_path
-        (module_identifier)
-        (module_identifier))
+      (module_path
+        (module_path
+          (module_name))
+        (module_name))
       (arguments
         (block
           (type_declaration
             (type_binding
-              (type_identifier)))
+              (type_constructor_path
+                (type_constructor))))
           (let_declaration
             (let_binding
-              (value_identifier)
+              (value_name)
               (type_annotation
-                (type_identifier))))))))
+                (type_constructor_path
+                  (type_constructor)))))))))
   (include_statement
     (module_type_of
-      (module_identifier_path
-        (module_identifier)
-        (module_identifier))))
+      (module_path
+        (module_path
+          (module_name))
+        (module_name))))
   (include_statement
-    (parenthesized_module_expression
+    (parenthesized_module_type
       (module_type_of
-        (module_identifier_path
-          (module_identifier)
-          (module_identifier)))))
+        (module_path
+          (module_path
+            (module_name))
+          (module_name)))))
   (include_statement
-    (parenthesized_module_expression
-      (module_identifier)
+    (typed_module_expression
+      (module_path
+        (module_name))
       (module_type_annotation
         (module_type_constraint
           (module_type_of
-            (module_identifier))
+            (module_path
+              (module_name)))
           (constrain_module
-            (module_identifier_path
-              (module_identifier)
-              (module_identifier))
-            (module_identifier_path
-              (module_identifier)
-              (module_identifier)))
+            (module_path
+              (module_path
+                (module_name))
+              (module_name))
+            (module_path
+              (module_path
+                (module_name))
+              (module_name)))
           (constrain_module
-            (module_identifier)
-            (module_identifier_path
-              (module_identifier)
-              (module_identifier)))))))
+            (module_path
+              (module_name))
+            (module_path
+              (module_path
+                (module_name))
+              (module_name)))))))
   (include_statement
     (module_type_of
       (block
         (include_statement
-          (module_identifier)))))
+          (module_path
+            (module_name))))))
   (include_statement
-    (block
-      (let_declaration
-        (let_binding
-          (value_identifier)
-          (call_expression
-            (value_identifier_path
-              (module_identifier)
-              (value_identifier))
-            (arguments
-              (string
-                (string_fragment)))))))))
+    (parenthesized_module_expression
+      (block
+        (let_declaration
+          (let_binding
+            (value_name)
+            (call_expression
+              (value_path
+                (module_path
+                  (module_name))
+                (value_name))
+              (arguments
+                (string
+                  (string_fragment))))))))))
 
 ================================================================================
 Simple definition
@@ -131,11 +151,12 @@ module MyModule = {
 (source_file
   (module_declaration
     (module_binding
-      (module_identifier)
+      (module_name)
       (block
         (type_declaration
           (type_binding
-            (type_identifier)))))))
+            (type_constructor_path
+              (type_constructor))))))))
 
 ================================================================================
 Signature and definition
@@ -162,45 +183,54 @@ module MyModule: {
 (source_file
   (module_declaration
     (module_binding
-      name: (module_identifier)
+      name: (module_name)
       signature: (block
         (let_declaration
           (let_binding
-            pattern: (value_identifier)
+            pattern: (value_name)
             (type_annotation
-              (type_identifier))))
+              (type_constructor_path
+                (type_constructor)))))
         (let_declaration
           (let_binding
-            pattern: (value_identifier)
+            pattern: (value_name)
             (type_annotation
-              (type_identifier))))
+              (type_constructor_path
+                (type_constructor)))))
         (let_declaration
           (let_binding
-            pattern: (value_identifier)
+            pattern: (value_name)
             (type_annotation
-              (type_identifier)))))))
+              (type_constructor_path
+                (type_constructor))))))))
   (module_declaration
     (module_binding
-      name: (module_identifier)
-      signature: (module_identifier_path
-        (module_identifier)
-        (module_identifier))
+      name: (module_name)
+      signature: (module_type_path
+        (module_path
+          (module_name))
+        (module_type_name
+          (module_name)))
       definition: (block
         (type_declaration
           (type_binding
-            name: (type_identifier))))))
+            name: (type_constructor_path
+              (type_constructor)))))))
   (module_declaration
     (module_binding
-      name: (module_identifier)
+      name: (module_name)
       signature: (block
         (type_declaration
           (type_binding
-            name: (type_identifier))))
+            name: (type_constructor_path
+              (type_constructor)))))
       definition: (block
         (type_declaration
           (type_binding
-            name: (type_identifier)
-            (type_identifier)))))))
+            name: (type_constructor_path
+              (type_constructor))
+            (type_constructor_path
+              (type_constructor))))))))
 
 ================================================================================
 Module types
@@ -215,21 +245,23 @@ module type t
 (source_file
   (module_declaration
     (module_binding
-      (module_identifier)
+      (module_name)
       (block
         (type_declaration
           (type_binding
-            (type_identifier))))))
+            (type_constructor_path
+              (type_constructor)))))))
   (module_declaration
     (module_binding
-      (module_identifier)
+      (module_name)
       (module_type_of
-        (module_identifier_path
-          (module_identifier)
-          (module_identifier)))))
+        (module_path
+          (module_path
+            (module_name))
+          (module_name)))))
   (module_declaration
     (module_binding
-      (type_identifier))))
+      (type_constructor))))
 
 ================================================================================
 First Class module
@@ -257,69 +289,84 @@ module S = unpack(%extension(payload))
 
 (source_file
   (expression_statement
-    (module_pack
-      (module_identifier)))
+    (package_expression
+      (module_path
+        (module_name))))
   (expression_statement
-    (module_pack
-      (module_identifier)
+    (package_expression
+      (module_path
+        (module_name))
       (module_type_annotation
-        (module_identifier))))
+        (module_type_path
+          (module_type_name
+            (module_name))))))
   (expression_statement
-    (module_pack
+    (package_expression
       (block
         (type_declaration
           (type_binding
-            (type_identifier)))
+            (type_constructor_path
+              (type_constructor))))
         (let_declaration
           (let_binding
-            (value_identifier)
+            (value_name)
             (string
               (string_fragment)))))
       (module_type_annotation
-        (module_identifier))))
+        (module_type_path
+          (module_type_name
+            (module_name))))))
   (expression_statement
-    (module_pack
+    (package_expression
       (functor_use
-        (module_identifier)
+        (module_path
+          (module_name))
         (arguments
           (module_unpack
-            (value_identifier))))))
+            (value_name))))))
   (module_declaration
     (module_binding
-      (module_identifier)
+      (module_name)
       (module_unpack
-        (value_identifier)
+        (value_name)
         (module_type_annotation
-          (module_identifier)))))
+          (module_type_path
+            (module_type_name
+              (module_name)))))))
   (module_declaration
     (module_binding
-      (module_identifier)
+      (module_name)
       (module_unpack
-        (value_identifier)
+        (value_name)
         (module_type_annotation
           (module_type_constraint
-            (module_identifier)
+            (module_type_path
+              (module_type_name
+                (module_name)))
             (constrain_type
-              (type_identifier)
-              (type_identifier)))))))
+              (type_constructor_path
+                (type_constructor))
+              (type_constructor_path
+                (type_constructor))))))))
   (module_declaration
     (module_binding
-      (module_identifier)
+      (module_name)
       (module_unpack
         (call_expression
-          (value_identifier_path
-            (module_identifier)
-            (value_identifier))
+          (value_path
+            (module_path
+              (module_name))
+            (value_name))
           (arguments
-            (value_identifier))))))
+            (value_name))))))
   (module_declaration
     (module_binding
-      (module_identifier)
+      (module_name)
       (module_unpack
         (extension_expression
           (extension_identifier)
           (expression_statement
-            (value_identifier)))))))
+            (value_name)))))))
 
 ================================================================================
 Functor definition
@@ -339,81 +386,103 @@ module F2: (S1, S1) => T = (X: S, Y: S) => {
 (source_file
   (module_declaration
     (module_binding
-      name: (module_identifier)
+      name: (module_name)
       definition: (functor
         parameters: (functor_parameters
           (functor_parameter
-            (module_identifier)
+            (module_path
+              (module_name))
             (module_type_annotation
               (block
                 (type_declaration
                   (type_binding
-                    name: (type_identifier))))))
+                    name: (type_constructor_path
+                      (type_constructor)))))))
           (functor_parameter
-            (module_identifier)
+            (module_path
+              (module_name))
             (module_type_annotation
               (block
                 (type_declaration
                   (type_binding
-                    name: (type_identifier)))))))
+                    name: (type_constructor_path
+                      (type_constructor))))))))
         return_module_type: (module_type_annotation
           (block
             (type_declaration
               (type_binding
-                name: (type_identifier)))
+                name: (type_constructor_path
+                  (type_constructor))))
             (type_declaration
               (type_binding
-                name: (type_identifier)))))
+                name: (type_constructor_path
+                  (type_constructor))))))
         body: (block
           (type_declaration
             (type_binding
-              name: (type_identifier)
-              (type_identifier_path
-                (module_identifier)
-                (type_identifier))))
+              name: (type_constructor_path
+                (type_constructor))
+              (type_constructor_path
+                (module_path
+                  (module_name))
+                (type_constructor))))
           (type_declaration
             (type_binding
-              name: (type_identifier)
-              (type_identifier_path
-                (module_identifier)
-                (type_identifier))))))))
+              name: (type_constructor_path
+                (type_constructor))
+              (type_constructor_path
+                (module_path
+                  (module_name))
+                (type_constructor))))))))
   (module_declaration
     (module_binding
-      name: (module_identifier)
+      name: (module_name)
       signature: (functor
         parameters: (functor_parameters
           (functor_parameter
-            (module_identifier))
+            (module_path
+              (module_name)))
           (functor_parameter
-            (module_identifier)))
-        body: (module_identifier))
+            (module_path
+              (module_name))))
+        body: (module_type_path
+          (module_type_name
+            (module_name))))
       definition: (functor
         parameters: (functor_parameters
           (functor_parameter
-            (module_identifier)
+            (module_path
+              (module_name))
             (module_type_annotation
-              (module_identifier)))
+              (module_type_path
+                (module_type_name
+                  (module_name)))))
           (functor_parameter
-            (module_identifier)
+            (module_path
+              (module_name))
             (module_type_annotation
-              (module_identifier))))
+              (module_type_path
+                (module_type_name
+                  (module_name))))))
         body: (block
           (let_declaration
             (let_binding
-              pattern: (value_identifier)
+              pattern: (value_name)
               body: (function
-                parameter: (value_identifier)
+                parameter: (value_name)
                 body: (call_expression
-                  function: (value_identifier_path
-                    (module_identifier)
-                    (value_identifier))
+                  function: (value_path
+                    (module_path
+                      (module_name))
+                    (value_name))
                   arguments: (arguments
                     (call_expression
-                      function: (value_identifier_path
-                        (module_identifier)
-                        (value_identifier))
+                      function: (value_path
+                        (module_path
+                          (module_name))
+                        (value_name))
                       arguments: (arguments
-                        (value_identifier)))))))))))))
+                        (value_name)))))))))))))
 
 ================================================================================
 Functor signature
@@ -428,22 +497,27 @@ module Make: (Content: StaticContent) => {
 (source_file
   (module_declaration
     (module_binding
-      (module_identifier)
+      (module_name)
       (functor
         (functor_parameters
           (functor_parameter
-            (module_identifier)
+            (module_path
+              (module_name))
             (module_type_annotation
-              (module_identifier))))
+              (module_type_path
+                (module_type_name
+                  (module_name))))))
         (block
           (let_declaration
             (let_binding
-              (value_identifier)
+              (value_name)
               (type_annotation
                 (function_type
                   (function_type_parameters
-                    (type_identifier))
-                  (type_identifier))))))))))
+                    (type_constructor_path
+                      (type_constructor)))
+                  (type_constructor_path
+                    (type_constructor)))))))))))
 
 ================================================================================
 Functor use
@@ -456,14 +530,17 @@ module M = MyFunctor(Foo, Bar.Baz)
 (source_file
   (module_declaration
     (module_binding
-      (module_identifier)
+      (module_name)
       (functor_use
-        (module_identifier)
+        (module_path
+          (module_name))
         (arguments
-          (module_identifier)
-          (module_identifier_path
-            (module_identifier)
-            (module_identifier)))))))
+          (module_path
+            (module_name))
+          (module_path
+            (module_path
+              (module_name))
+            (module_name)))))))
 
 ================================================================================
 Alias
@@ -477,16 +554,18 @@ module Foo' = Foo
 (source_file
   (module_declaration
     (module_binding
-      (module_identifier)
-      (module_identifier_path
-        (module_identifier_path
-          (module_identifier)
-          (module_identifier))
-        (module_identifier))))
+      (module_name)
+      (module_path
+        (module_path
+          (module_path
+            (module_name))
+          (module_name))
+        (module_name))))
   (module_declaration
     (module_binding
-      (module_identifier)
-      (module_identifier))))
+      (module_name)
+      (module_path
+        (module_name)))))
 
 ================================================================================
 Recursive
@@ -508,29 +587,36 @@ and B: T = {
 (source_file
   (module_declaration
     (module_binding
-      (module_identifier)
+      (module_name)
       (block
         (include_statement
-          (module_identifier)))
-      (module_identifier)))
+          (module_path
+            (module_name))))
+      (module_path
+        (module_name))))
   (module_declaration
     (module_binding
-      (module_identifier)
-      (module_identifier)
+      (module_name)
+      (module_type_path
+        (module_type_name
+          (module_name)))
       (block
         (let_declaration
           (let_binding
-            (value_identifier)
-            (value_identifier_path
-              (module_identifier)
-              (value_identifier))))))
+            (value_name)
+            (value_path
+              (module_path
+                (module_name))
+              (value_name))))))
     (module_binding
-      (module_identifier)
-      (module_identifier)
+      (module_name)
+      (module_type_path
+        (module_type_name
+          (module_name)))
       (block
         (let_declaration
           (let_binding
-            (value_identifier)
+            (value_name)
             (number)))))))
 
 ================================================================================
@@ -544,7 +630,7 @@ module Styles = %makeStyles(())
 (source_file
   (module_declaration
     (module_binding
-      (module_identifier)
+      (module_name)
       (extension_expression
         (extension_identifier)
         (expression_statement
@@ -572,34 +658,39 @@ external add: (
 
 (source_file
   (external_declaration
-    (value_identifier)
+    (value_name)
     (type_annotation
       (function_type
         (function_type_parameters
-          (type_identifier))
-        (type_identifier)))
+          (type_constructor_path
+            (type_constructor)))
+        (type_constructor_path
+          (type_constructor))))
     (string
       (string_fragment)))
   (external_declaration
-    (value_identifier)
+    (value_name)
     (type_annotation
-      (type_identifier))
+      (type_constructor_path
+        (type_constructor)))
     (string
       (string_fragment)))
   (external_declaration
-    (value_identifier)
+    (value_name)
     (type_annotation
-      (type_identifier))
+      (type_constructor_path
+        (type_constructor)))
     (string
       (string_fragment)))
   (external_declaration
-    (value_identifier)
+    (value_name)
     (type_annotation
-      (type_identifier))
+      (type_constructor_path
+        (type_constructor)))
     (string
       (string_fragment)))
   (external_declaration
-    (value_identifier)
+    (value_name)
     (type_annotation
       (function_type
         (function_type_parameters
@@ -612,46 +703,49 @@ external add: (
     (string
       (string_fragment)))
   (external_declaration
-    (value_identifier)
+    (value_name)
     (type_annotation
       (function_type
         (function_type_parameters
           (parameter
-            (type_identifier_path
-              (module_identifier)
-              (type_identifier)))
+            (type_constructor_path
+              (module_path
+                (module_name))
+              (type_constructor)))
           (parameter
             (labeled_parameter
-              (value_identifier)
+              (value_name)
               (type_annotation
-                (type_identifier)))))
+                (type_constructor_path
+                  (type_constructor))))))
         (unit_type)))
     (string
       (string_fragment)))
   (external_declaration
-    (value_identifier)
+    (value_name)
     (type_annotation
       (function_type
         (function_type_parameters
           (parameter
-            (type_identifier))
+            (type_constructor_path
+              (type_constructor)))
           (parameter
             (labeled_parameter
-              (value_identifier)
+              (value_name)
               (type_annotation
                 (polyvar_type
                   (polyvar_declaration
-                    (polyvar_identifier)
-                    (polyvar_parameters
-                      (type_identifier_path
-                        (module_identifier)
-                        (type_identifier))))
+                    (polyvar)
+                    (type_constructor_path
+                      (module_path
+                        (module_name))
+                      (type_constructor)))
                   (polyvar_declaration
-                    (polyvar_identifier)
-                    (polyvar_parameters
-                      (type_identifier_path
-                        (module_identifier)
-                        (type_identifier)))))))))
+                    (polyvar)
+                    (type_constructor_path
+                      (module_path
+                        (module_name))
+                      (type_constructor))))))))
         (unit_type)))
     (string
       (string_fragment))))
@@ -668,17 +762,22 @@ exception Invalid = Errors.Invalid
 
 (source_file
   (exception_declaration
-    (variant_identifier)
-    (variant_parameters
-      (type_identifier)))
+    (constructor_declaration
+      (constructor_name)
+      (type_constructor_path
+        (type_constructor))))
   (exception_declaration
-    (variant_identifier)
-    (variant_identifier))
+    (constructor_declaration
+      (constructor_name))
+    (constructor_path
+      (constructor_name)))
   (exception_declaration
-    (variant_identifier)
-    (nested_variant_identifier
-      (module_identifier)
-      (variant_identifier))))
+    (constructor_declaration
+      (constructor_name))
+    (constructor_path
+      (module_path
+        (module_name))
+      (constructor_name))))
 
 ================================================================================
 Module Constraints
@@ -696,53 +795,76 @@ module M = (Na: N, Nb: N): (
 
 (source_file
   (expression_statement
-    (module_pack
-      (module_identifier)
+    (package_expression
+      (module_path
+        (module_name))
       (module_type_annotation
         (module_type_constraint
-          (module_identifier)
+          (module_type_path
+            (module_type_name
+              (module_name)))
           (constrain_type
-            (type_identifier)
-            (type_identifier))
+            (type_constructor_path
+              (type_constructor))
+            (type_constructor_path
+              (type_constructor)))
           (constrain_type
-            (type_identifier)
-            (type_identifier))))))
+            (type_constructor_path
+              (type_constructor))
+            (type_constructor_path
+              (type_constructor)))))))
   (module_declaration
     (module_binding
-      name: (module_identifier)
+      name: (module_name)
       definition: (functor
         parameters: (functor_parameters)
         return_module_type: (module_type_annotation
-          (parenthesized_module_expression
+          (parenthesized_module_type
             (module_type_constraint
-              (module_identifier)
+              (module_type_path
+                (module_type_name
+                  (module_name)))
               (constrain_type
-                (type_identifier)
-                (type_identifier)))))
+                (type_constructor_path
+                  (type_constructor))
+                (type_constructor_path
+                  (type_constructor))))))
         body: (block))))
   (module_declaration
     (module_binding
-      name: (module_identifier)
+      name: (module_name)
       definition: (functor
         parameters: (functor_parameters
           (functor_parameter
-            (module_identifier)
+            (module_path
+              (module_name))
             (module_type_annotation
-              (module_identifier)))
+              (module_type_path
+                (module_type_name
+                  (module_name)))))
           (functor_parameter
-            (module_identifier)
+            (module_path
+              (module_name))
             (module_type_annotation
-              (module_identifier))))
+              (module_type_path
+                (module_type_name
+                  (module_name))))))
         return_module_type: (module_type_annotation
-          (parenthesized_module_expression
+          (parenthesized_module_type
             (module_type_constraint
-              (parenthesized_module_expression
+              (parenthesized_module_type
                 (module_type_constraint
-                  (module_identifier)
+                  (module_type_path
+                    (module_type_name
+                      (module_name)))
                   (constrain_type
-                    (type_identifier)
-                    (type_identifier))))
+                    (type_constructor_path
+                      (type_constructor))
+                    (type_constructor_path
+                      (type_constructor)))))
               (constrain_type
-                (type_identifier)
-                (type_identifier)))))
+                (type_constructor_path
+                  (type_constructor))
+                (type_constructor_path
+                  (type_constructor))))))
         body: (block)))))

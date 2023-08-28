@@ -85,4 +85,5 @@ Decorator with type
     (decorator_identifier)
     (decorator_arguments
       (type_annotation
-        (type_identifier)))))
+        (type_constructor_path
+          (type_constructor))))))

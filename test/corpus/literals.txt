@@ -271,13 +271,13 @@ anything`Hello`
         (escape_sequence)
         (template_substitution
           (call_expression
-            (value_identifier)
+            (value_name)
             (arguments
               (string
                 (string_fragment)))))
         (escape_sequence)
         (template_substitution
-          (value_identifier)))))
+          (value_name)))))
   (expression_statement
     (template_string
       (template_string_content)))
@@ -372,23 +372,19 @@ Polyvars
 
 (source_file
   (expression_statement
-    (polyvar
-      (polyvar_identifier)))
+    (polyvar))
   (expression_statement
-    (polyvar
-      (polyvar_identifier)
+    (call_expression
+      (polyvar)
       (arguments
         (number))))
   (expression_statement
     (polyvar
-      (polyvar_identifier
-        (polyvar_string
-          (string_fragment)))))
+      (polyvar_string
+        (string_fragment))))
   (expression_statement
     (polyvar
-      (polyvar_identifier
-        (polyvar_string
-          (string_fragment)))))
+      (polyvar_string
+        (string_fragment))))
   (expression_statement
-    (polyvar
-      (polyvar_identifier))))
+    (polyvar)))

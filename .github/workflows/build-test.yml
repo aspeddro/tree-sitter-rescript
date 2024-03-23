@@ -9,13 +9,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - run: yarn install
+
       - uses: tree-sitter/setup-action@v1
         with:
           install-lib: false
       - run: tree-sitter generate
 
-      - name: Test
-        run: tree-sitter test
+      - run: tree-sitter test
 
       - name: Clone repo examples
         run: |

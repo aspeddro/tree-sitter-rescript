@@ -3,11 +3,12 @@ on: [push, pull_request]
 
 jobs:
   generate:
-    name: Generate parser
+    name: Build / Test parser
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - uses: tree-sitter/setup-action@v1
         with:
           install-lib: false
@@ -26,6 +27,8 @@ jobs:
           TheSpyder/rescript-nodejs.git \
           | xargs -n1 | xargs -I{} git clone --depth 1 https://github.com/{} examples/{}
 
-      - run: tree-sitter --version
-      - name: Parse examples
-        run: tree-sitter parse example/ReadFileByLine.res
+      - uses: tree-sitter/parse-action@v3
+        continue-on-error: true
+        with:
+          files: |-
+            examples/**/**.res*

@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - run: yarn install
+      - run: npm install
 
       - uses: tree-sitter/setup-action@v1
         with:

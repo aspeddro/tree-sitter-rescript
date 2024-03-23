@@ -24,5 +24,6 @@ jobs:
           TheSpyder/rescript-nodejs.git \
           | xargs -n1 | xargs -I{} git clone --depth 1 https://github.com/{} examples/{}
 
+      - run: tree-sitter --version
       - name: Parse examples
         run: tree-sitter parse example/ReadFileByLine.res
